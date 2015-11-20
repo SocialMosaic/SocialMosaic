@@ -54,14 +54,14 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AHE-TT-9qL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KHi-vc-bvD"/>
-                            <constraint firstItem="AHE-TT-9qL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qt6-oR-nDR"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RhI-Hz-Bu7"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W2M-um-0TP"/>
-                            <constraint firstAttribute="trailing" secondItem="AHE-TT-9qL" secondAttribute="trailing" id="XI1-bp-63y"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerY" secondItem="AHE-TT-9qL" secondAttribute="centerY" id="Yub-MA-vU4"/>
                             <constraint firstAttribute="trailing" secondItem="ePS-Ff-Gq7" secondAttribute="trailing" id="c1N-RS-aY3"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g6K-M0-OOP"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AHE-TT-9qL" secondAttribute="bottom" id="lIM-Rt-PEe"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="width" secondItem="AHE-TT-9qL" secondAttribute="width" id="mKK-VB-ttc"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerX" secondItem="AHE-TT-9qL" secondAttribute="centerX" id="vaw-P3-PPa"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="height" secondItem="AHE-TT-9qL" secondAttribute="height" id="xjb-N0-leM"/>
                         </constraints>
                     </view>
                     <connections>
