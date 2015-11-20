@@ -14,11 +14,11 @@
     CGContextSetLineWidth(context, 1.0f);
     CGContextSetStrokeColorWithColor(context, [[UIColor lightGrayColor] CGColor]);
     
-    for (int i = 1; i <= self.cellsAcross; i++) {
+    for (int i = 1; i < self.cellsAcross; i++) {
         [self drawColumnNumber:i context:context];
     }
     
-    for (int i = 1; i <= self.cellsAcross; i++) {
+    for (int i = 1; i < self.cellsAcross; i++) {
         [self drawRowNumber:i context:context];
     }
 }
