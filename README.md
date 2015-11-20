@@ -14,3 +14,5 @@ Social Mosaic is an app that allows users to upload photos to fill in "tiles" of
 - [ ] User can see a list of past mosaics on the home screen.
 - [ ] Multiple users can collaborate on a mosaic, each user filling out different tiles.
 - [ ] User can use pinch gestures to zoom in and out on the grid when taking a photo (i.e., for when tiles are very small).
+
+&copy; 2015 Jesse Pinho, Michael Hines, and Jim Challenger
