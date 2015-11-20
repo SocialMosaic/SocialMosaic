@@ -6,18 +6,21 @@
 //  Copyright © 2015 SocialMosaic. All rights reserved.
 //
 
+#import "GridView.h"
 #import "TilesViewController.h"
 
 int const TilesPerRow = 10;
 
 @interface TilesViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet GridView *gridView;
 @end
 
 @implementation TilesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.gridView.cellsAcross = TilesPerRow;
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
 }

@@ -41,18 +41,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePS-Ff-Gq7" customClass="GridView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ePS-Ff-Gq7" secondAttribute="bottom" id="DuB-6c-Rq2"/>
                             <constraint firstItem="AHE-TT-9qL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KHi-vc-bvD"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qt1-Ej-eo0"/>
                             <constraint firstItem="AHE-TT-9qL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qt6-oR-nDR"/>
                             <constraint firstAttribute="trailing" secondItem="AHE-TT-9qL" secondAttribute="trailing" id="XI1-bp-63y"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AHE-TT-9qL" secondAttribute="bottom" id="lIM-Rt-PEe"/>
+                            <constraint firstAttribute="trailing" secondItem="ePS-Ff-Gq7" secondAttribute="trailing" id="uMT-CF-9MA"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="z8k-JD-Mri"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="AHE-TT-9qL" id="OXd-um-rK9"/>
+                        <outlet property="gridView" destination="ePS-Ff-Gq7" id="3ju-TX-acB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC5440961BFEC463001E3005 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5440951BFEC463001E3005 /* GridView.m */; };
 		ECFEE9551BFEA7EB004E04AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFEE9541BFEA7EB004E04AF /* main.m */; };
 		ECFEE9581BFEA7EB004E04AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFEE9571BFEA7EB004E04AF /* AppDelegate.m */; };
 		ECFEE95B1BFEA7EB004E04AF /* TilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFEE95A1BFEA7EB004E04AF /* TilesViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC5440941BFEC463001E3005 /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
+		EC5440951BFEC463001E3005 /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
 		ECFEE9501BFEA7EB004E04AF /* SocialMosaic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMosaic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFEE9541BFEA7EB004E04AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECFEE9561BFEA7EB004E04AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +42,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC5440921BFEC3D9001E3005 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ECFEE9591BFEA7EB004E04AF /* TilesViewController.h */,
+				ECFEE95A1BFEA7EB004E04AF /* TilesViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EC5440931BFEC3E4001E3005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC5440941BFEC463001E3005 /* GridView.h */,
+				EC5440951BFEC463001E3005 /* GridView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		ECFEE9471BFEA7EB004E04AF = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +79,10 @@
 		ECFEE9521BFEA7EB004E04AF /* SocialMosaic */ = {
 			isa = PBXGroup;
 			children = (
+				EC5440931BFEC3E4001E3005 /* Views */,
+				EC5440921BFEC3D9001E3005 /* View Controllers */,
 				ECFEE9561BFEA7EB004E04AF /* AppDelegate.h */,
 				ECFEE9571BFEA7EB004E04AF /* AppDelegate.m */,
-				ECFEE9591BFEA7EB004E04AF /* TilesViewController.h */,
-				ECFEE95A1BFEA7EB004E04AF /* TilesViewController.m */,
 				ECFEE95C1BFEA7EB004E04AF /* Main.storyboard */,
 				ECFEE95F1BFEA7EB004E04AF /* Assets.xcassets */,
 				ECFEE9611BFEA7EB004E04AF /* LaunchScreen.storyboard */,
@@ -151,6 +172,7 @@
 			files = (
 				ECFEE95B1BFEA7EB004E04AF /* TilesViewController.m in Sources */,
 				ECFEE9581BFEA7EB004E04AF /* AppDelegate.m in Sources */,
+				EC5440961BFEC463001E3005 /* GridView.m in Sources */,
 				ECFEE9551BFEA7EB004E04AF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
