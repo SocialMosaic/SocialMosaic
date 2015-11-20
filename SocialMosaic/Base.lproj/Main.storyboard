@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Tiles View Controller-->
@@ -41,23 +42,26 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePS-Ff-Gq7" customClass="GridView">
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="ePS-Ff-Gq7" customClass="GridView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ePS-Ff-Gq7" secondAttribute="height" multiplier="1:1" id="ta8-eh-X7V"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ePS-Ff-Gq7" secondAttribute="bottom" id="DuB-6c-Rq2"/>
                             <constraint firstItem="AHE-TT-9qL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KHi-vc-bvD"/>
-                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qt1-Ej-eo0"/>
                             <constraint firstItem="AHE-TT-9qL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qt6-oR-nDR"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RhI-Hz-Bu7"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W2M-um-0TP"/>
                             <constraint firstAttribute="trailing" secondItem="AHE-TT-9qL" secondAttribute="trailing" id="XI1-bp-63y"/>
+                            <constraint firstAttribute="trailing" secondItem="ePS-Ff-Gq7" secondAttribute="trailing" id="c1N-RS-aY3"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g6K-M0-OOP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AHE-TT-9qL" secondAttribute="bottom" id="lIM-Rt-PEe"/>
-                            <constraint firstAttribute="trailing" secondItem="ePS-Ff-Gq7" secondAttribute="trailing" id="uMT-CF-9MA"/>
-                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="z8k-JD-Mri"/>
                         </constraints>
                     </view>
                     <connections>
