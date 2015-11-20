@@ -2,17 +2,38 @@
 
 Social Mosaic is an app that allows users to upload photos to fill in "tiles" of a larger photo to create a mosaic that reproduces the original photo... socially.
 
-## Core user stories (MVP)
-- [ ] There is a collection of images for the user to choose from.
-- [ ] User can select an image to use for a mosaic. When the image is selected, it appears full-screen.
-- [ ] The full-screen image has a grid overlay.
-- [ ] User can tap a "tile" to take a photo for that specific tile. The camera view fills that tile to allow the user to see how their photo would line up with the mosaic.
-- [ ] After all tiles have been filled with photos, the user can save the mosaic as a photo on their phone.
+## MVP
+- [ ] Show a collection of images
+- [ ] User can select an image from collection
+- [ ] Show a grid overlay on the full screen image
+- [ ] User can tap a tile to take a photo for the tile
+- [ ] Taking a photo for a tile should save the tile in place, and return to the grid screen
+- [ ] User can save the current photo at any time
 
-## Optional user stories (nice-to-haves)
-- [ ] User can share their completed mosaic on social outlets.
-- [ ] User can see a list of past mosaics on the home screen.
-- [ ] Multiple users can collaborate on a mosaic, each user filling out different tiles.
-- [ ] User can use pinch gestures to zoom in and out on the grid when taking a photo (i.e., for when tiles are very small).
+## Persistence
+- [ ] Show a welcome screen with option to start a new project
+- [ ] Be able to go back to welcome screen and start a second project
+- [ ] Show a list of current projects on the welcome screen
+- [ ] Log in with facebook from welcome screen
+- [ ] If logged in, show logged in user instead of facebook icon
+- [ ] Save user to parse
+- [ ] Save user's progress to parse
+
+## Collaboration Features
+- [ ] Welcome screen has an option to create a solo or team project
+- [ ] Current projects show the users participating
+- [ ] Tap an already-taken photo to see who took it
+- [ ] Creating a team project shows a list of facebook friends
+- [ ] User can select multiple friends from facebook list
+- [ ] When adding a project with friends, friends automatically see the project when they log in
+
+## Polish Features
+- [ ] Start a new mosaic from the camera
+- [ ] Load new possible images from Parse
+- [ ] Pan and zoom final image
+- [ ] Zooming in on an image loads better quality images
+- [ ] Pan and zoom in-progress image
+- [ ] Flip animation on tile to show camera
+- [ ] Add filter to grade difficulty of templates from easy to hard
 
 &copy; 2015 Jesse Pinho, Michael Hines, and Jim Challenger
