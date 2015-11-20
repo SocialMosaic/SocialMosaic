@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		ECFEE9551BFEA7EB004E04AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFEE9541BFEA7EB004E04AF /* main.m */; };
 		ECFEE9581BFEA7EB004E04AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFEE9571BFEA7EB004E04AF /* AppDelegate.m */; };
-		ECFEE95B1BFEA7EB004E04AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFEE95A1BFEA7EB004E04AF /* ViewController.m */; };
+		ECFEE95B1BFEA7EB004E04AF /* TilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFEE95A1BFEA7EB004E04AF /* TilesViewController.m */; };
 		ECFEE95E1BFEA7EB004E04AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFEE95C1BFEA7EB004E04AF /* Main.storyboard */; };
 		ECFEE9601BFEA7EB004E04AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFEE95F1BFEA7EB004E04AF /* Assets.xcassets */; };
 		ECFEE9631BFEA7EB004E04AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFEE9611BFEA7EB004E04AF /* LaunchScreen.storyboard */; };
@@ -20,8 +20,8 @@
 		ECFEE9541BFEA7EB004E04AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECFEE9561BFEA7EB004E04AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ECFEE9571BFEA7EB004E04AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ECFEE9591BFEA7EB004E04AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ECFEE95A1BFEA7EB004E04AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ECFEE9591BFEA7EB004E04AF /* TilesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TilesViewController.h; sourceTree = "<group>"; };
+		ECFEE95A1BFEA7EB004E04AF /* TilesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TilesViewController.m; sourceTree = "<group>"; };
 		ECFEE95D1BFEA7EB004E04AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECFEE95F1BFEA7EB004E04AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECFEE9621BFEA7EB004E04AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 			children = (
 				ECFEE9561BFEA7EB004E04AF /* AppDelegate.h */,
 				ECFEE9571BFEA7EB004E04AF /* AppDelegate.m */,
-				ECFEE9591BFEA7EB004E04AF /* ViewController.h */,
-				ECFEE95A1BFEA7EB004E04AF /* ViewController.m */,
+				ECFEE9591BFEA7EB004E04AF /* TilesViewController.h */,
+				ECFEE95A1BFEA7EB004E04AF /* TilesViewController.m */,
 				ECFEE95C1BFEA7EB004E04AF /* Main.storyboard */,
 				ECFEE95F1BFEA7EB004E04AF /* Assets.xcassets */,
 				ECFEE9611BFEA7EB004E04AF /* LaunchScreen.storyboard */,
@@ -149,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECFEE95B1BFEA7EB004E04AF /* ViewController.m in Sources */,
+				ECFEE95B1BFEA7EB004E04AF /* TilesViewController.m in Sources */,
 				ECFEE9581BFEA7EB004E04AF /* AppDelegate.m in Sources */,
 				ECFEE9551BFEA7EB004E04AF /* main.m in Sources */,
 			);
@@ -300,6 +300,7 @@
 				ECFEE9691BFEA7EB004E04AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
