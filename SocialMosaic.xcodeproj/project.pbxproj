@@ -14,9 +14,13 @@
 		ECFEE95E1BFEA7EB004E04AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFEE95C1BFEA7EB004E04AF /* Main.storyboard */; };
 		ECFEE9601BFEA7EB004E04AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFEE95F1BFEA7EB004E04AF /* Assets.xcassets */; };
 		ECFEE9631BFEA7EB004E04AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFEE9611BFEA7EB004E04AF /* LaunchScreen.storyboard */; };
+		EDFB5149C9DB26B0172885C5 /* libPods-SocialMosaic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D9EDF2DEC11295384D79FF /* libPods-SocialMosaic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15D9EDF2DEC11295384D79FF /* libPods-SocialMosaic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialMosaic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3FA0419CCF5C74A0517EEAD /* Pods-SocialMosaic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMosaic.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMosaic/Pods-SocialMosaic.release.xcconfig"; sourceTree = "<group>"; };
+		D6B8128100371E815BC8DF80 /* Pods-SocialMosaic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMosaic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMosaic/Pods-SocialMosaic.debug.xcconfig"; sourceTree = "<group>"; };
 		EC5440941BFEC463001E3005 /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
 		EC5440951BFEC463001E3005 /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
 		ECFEE9501BFEA7EB004E04AF /* SocialMosaic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMosaic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,12 +40,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFB5149C9DB26B0172885C5 /* libPods-SocialMosaic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64696AB96A5A1DF1AE545220 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6B8128100371E815BC8DF80 /* Pods-SocialMosaic.debug.xcconfig */,
+				A3FA0419CCF5C74A0517EEAD /* Pods-SocialMosaic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0444E49E23A8B87DB2A68FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15D9EDF2DEC11295384D79FF /* libPods-SocialMosaic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EC5440921BFEC3D9001E3005 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +87,8 @@
 			children = (
 				ECFEE9521BFEA7EB004E04AF /* SocialMosaic */,
 				ECFEE9511BFEA7EB004E04AF /* Products */,
+				64696AB96A5A1DF1AE545220 /* Pods */,
+				D0444E49E23A8B87DB2A68FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECFEE9671BFEA7EB004E04AF /* Build configuration list for PBXNativeTarget "SocialMosaic" */;
 			buildPhases = (
+				87DA7670A355802345925509 /* Check Pods Manifest.lock */,
 				ECFEE94C1BFEA7EB004E04AF /* Sources */,
 				ECFEE94D1BFEA7EB004E04AF /* Frameworks */,
 				ECFEE94E1BFEA7EB004E04AF /* Resources */,
+				6120D2D5F8FF786DE7C4DEB9 /* Embed Pods Frameworks */,
+				6D2D19552362DCCFBD5EE3DB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +192,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6120D2D5F8FF786DE7C4DEB9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialMosaic/Pods-SocialMosaic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D2D19552362DCCFBD5EE3DB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialMosaic/Pods-SocialMosaic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87DA7670A355802345925509 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECFEE94C1BFEA7EB004E04AF /* Sources */ = {
@@ -284,6 +359,7 @@
 		};
 		ECFEE9681BFEA7EB004E04AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6B8128100371E815BC8DF80 /* Pods-SocialMosaic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -298,6 +374,7 @@
 		};
 		ECFEE9691BFEA7EB004E04AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3FA0419CCF5C74A0517EEAD /* Pods-SocialMosaic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

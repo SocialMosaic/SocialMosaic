@@ -4,6 +4,6 @@
 # use_frameworks!
 
 target 'SocialMosaic' do
-
+  pod 'FastttCamera'
 end
 
