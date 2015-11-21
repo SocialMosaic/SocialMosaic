@@ -6,6 +6,7 @@
 //  Copyright © 2015 SocialMosaic. All rights reserved.
 //
 
+#import <FastttCamera.h>
 #import "GridView.h"
 #import "TilesViewController.h"
 
@@ -14,7 +15,7 @@ int const TilesPerRow = 5;
 @interface TilesViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet GridView *gridView;
-@property (strong, nonatomic) UIImagePickerController *camera;
+@property (strong, nonatomic) FastttCamera *camera;
 @property (nonatomic) int tilesPerRow;
 @end
 
@@ -32,17 +33,11 @@ int const TilesPerRow = 5;
 }
 
 - (void)initCamera {
-    if ([self cameraIsAvailable]) {
-        self.camera = [[UIImagePickerController alloc] init];
-        self.camera.sourceType = UIImagePickerControllerSourceTypeCamera;
-        self.camera.allowsEditing = NO;
-        self.camera.showsCameraControls = NO;
-        [self initCameraViewTransform];
-    }
-}
-
-- (BOOL)cameraIsAvailable {
-    return [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+    self.camera = [FastttCamera new];
+    self.camera.delegate = self;
+    [self.camera willMoveToParentViewController:self];
+    [self addChildViewController:self.camera];
+    [self.camera didMoveToParentViewController:self];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -60,22 +55,8 @@ int const TilesPerRow = 5;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if ([self cameraIsAvailable]) {
-        [self.camera willMoveToParentViewController:self];
-        [[collectionView cellForItemAtIndexPath:indexPath] addSubview:self.camera.view];
-        [self.camera didMoveToParentViewController:self];
-    }
-}
-
-- (void)initCameraViewTransform {
-    CGFloat ratioOfCellToView = 1.0 / self.tilesPerRow;
-    CGFloat inverseOfRatioOfCellToView = 1.0 - ratioOfCellToView;
-    CGFloat correctionForScaledPixels = (float)self.tilesPerRow;
-    CGFloat correctionForPhotoAspectRatio = 0.75;
-    CGFloat leftOffset = self.view.frame.size.width * inverseOfRatioOfCellToView * 0.5;
-    CGFloat topOffset = self.view.frame.size.height * inverseOfRatioOfCellToView * 0.5;
-    CGAffineTransform transformTranslate = CGAffineTransformMakeTranslation(-(leftOffset * correctionForScaledPixels), -(topOffset * correctionForScaledPixels * correctionForPhotoAspectRatio));
-    CGAffineTransform transformScale = CGAffineTransformMakeScale(ratioOfCellToView, ratioOfCellToView);
-    self.camera.cameraViewTransform = CGAffineTransformConcat(transformTranslate, transformScale);
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    [cell addSubview:self.camera.view];
+    self.camera.view.frame = cell.bounds;
 }
 @end

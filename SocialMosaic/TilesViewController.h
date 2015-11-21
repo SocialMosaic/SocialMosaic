@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TilesViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate>
+@interface TilesViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, FastttCameraDelegate>
 @end
