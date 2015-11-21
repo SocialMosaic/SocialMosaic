@@ -16,6 +16,7 @@ int const TilesPerRow = 5;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet GridView *gridView;
 @property (strong, nonatomic) FastttCamera *camera;
+@property (weak, nonatomic) UICollectionViewCell *cameraCell;
 @property (nonatomic) int tilesPerRow;
 @end
 
@@ -55,16 +56,27 @@ int const TilesPerRow = 5;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-    [cell addSubview:self.camera.view];
-    self.camera.view.frame = cell.bounds;
+    self.cameraCell = [collectionView cellForItemAtIndexPath:indexPath];
+}
+
+- (void)setCameraCell:(UICollectionViewCell *)cameraCell {
+    _cameraCell = cameraCell;
+    if (cameraCell) {
+        [cameraCell addSubview:self.camera.view];
+        self.camera.view.frame = cameraCell.bounds;
+    }
 }
 
 - (IBAction)onShutterButton:(id)sender {
-    [self.camera takePicture];
+    if (self.cameraCell) {
+        [self.camera takePicture];
+    }
 }
 
-- (void)cameraController:(id<FastttCameraInterface>)cameraController didFinishNormalizingCapturedImage:(FastttCapturedImage *)capturedImage {
-    NSLog(@"didFinishNormalizingCapturedImage");
+- (void)cameraController:(id<FastttCameraInterface>)cameraController didFinishCapturingImage:(FastttCapturedImage *)capturedImage {
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:capturedImage.rotatedPreviewImage];
+    [self.cameraCell addSubview:imageView];
+    imageView.frame = self.cameraCell.bounds;
+    self.cameraCell = nil;
 }
 @end
