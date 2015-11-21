@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  GridView.h
 //  SocialMosaic
 //
 //  Created by Jesse Pinho on 11/19/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface GridView : UIView
+@property (nonatomic) int cellsAcross;
 @end
-

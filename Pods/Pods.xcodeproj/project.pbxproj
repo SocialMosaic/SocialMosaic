@@ -6,43 +6,285 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		021D7DF0F6E0D4F8EF9E4392D23DE848 /* FastttCameraTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = FBE8F413DB66D7F424FD8DCC886A9CD4 /* FastttCameraTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		027815F61DD062B67213B002BD83AE44 /* FastttCapturedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B63733A9E0F0334B9A24EA9837468 /* FastttCapturedImage.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		0981DD38C75C9F6A447A36817101726B /* FastttFocus.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FAB7062CD76CEFC7DCBFBF2FBBF097 /* FastttFocus.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		0BD9E1373BEC9EF4204D17148526F6DA /* UIImage+FastttCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0FA9C280BC565797D66332543E0F73 /* UIImage+FastttCamera.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		0E15F64757F406DE18395D95024869C3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A128C3063A47C124358165CE1AAD4708 /* CoreMotion.framework */; };
+		0F460C7C0CE2C72D39FE8878B0295253 /* FastttCameraInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 88464A664811A7DF8FCB1B7DCF9F3482 /* FastttCameraInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13530B7C08EB40456656139C071D244A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D4239F658851B0ACF21DEF0BC4A6CB /* AVFoundation.framework */; };
+		19A2F8060B39CB1933E7EFAD5EFDBE55 /* FastttCapturedImage+Process.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE0EDE69CABEED431987D50B444EB47 /* FastttCapturedImage+Process.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		216599001D0E171B855CCA5C54E69E4D /* FastttCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2E4E28951911A79A1FE92B56834BF4 /* FastttCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		572EF44F7E107A7F47E1BA0FA7540C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39E0852DFFE016FC8A9C5B5C151CAC3 /* Foundation.framework */; };
+		577877CA9299D4A409B278E81937D737 /* FastttFocus.h in Headers */ = {isa = PBXBuildFile; fileRef = F061B0A3C26467C9292D7E687FDBAC7A /* FastttFocus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E8B526E62D7471A18DD0AE32FF96F46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39E0852DFFE016FC8A9C5B5C151CAC3 /* Foundation.framework */; };
+		65C1D5FD91908CABBD0A0F60C7ADEF7C /* UIViewController+FastttCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6C465D58F05B8FA0812646E1A439EC /* UIViewController+FastttCamera.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		66958A955551493D56118B53D8639235 /* UIViewController+FastttCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F0BFB89A5B752FD6E36EC79D71C5C34 /* UIViewController+FastttCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EAF2ABD85D210CEF146B9D629824E51 /* FastttCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0F0484A25EF45A5DE1F4B17AB7F /* FastttCamera-dummy.m */; };
+		7633D60B58EB00408CC473687B7BFF6F /* FastttZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3897F9C74F986A2DAFAA1F330A9462 /* FastttZoom.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		7A5A55FFE32A5776EA539D1B94B6E1B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE6E4A8644E43A25F1F99FFCE10E565 /* UIKit.framework */; };
+		815C0E1A91459EC70FF5556265103A6E /* AVCaptureDevice+FastttCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = A281718A921F6769CB8138387E661B92 /* AVCaptureDevice+FastttCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84D08408FB94F381F4C44104A65EC62E /* FastttCapturedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 76EFCBA2042CC9D22430133B09507A92 /* FastttCapturedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D5F5289598A3F920E6A11B9BC31834F /* Pods-SocialMosaic-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04292EFDB0607A80A13C22E642229678 /* Pods-SocialMosaic-dummy.m */; };
+		A187F00A2E0390628AA6EB3A4E19CC15 /* FastttZoom.h in Headers */ = {isa = PBXBuildFile; fileRef = E0E7B73243B5BCD8AF8E60B38ABE4463 /* FastttZoom.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7B285A9993225E13607088E6B1199E4 /* UIImage+FastttCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = DACB350A256ECF19824316841961CE96 /* UIImage+FastttCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDDE318FAE68331FF83308C6ED3006AD /* FastttCapturedImage+Process.h in Headers */ = {isa = PBXBuildFile; fileRef = DD649C576D70D68B09EC81FE098A7284 /* FastttCapturedImage+Process.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CADB9714A8533D8AF9A4C245551B1DFD /* FastttCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F13D91C3990A2E7678B2FDF7652ED9 /* FastttCamera.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		CE75EB8F2CB107BA2030978462FF7676 /* AVCaptureDevice+FastttCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD97E559D358ECD24F363E51D3C2D2E /* AVCaptureDevice+FastttCamera.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+		F110991AC76E8BB6195875A3852D03FA /* IFTTTDeviceOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = AED2AE4115048A4C04AA07CA2F24EC91 /* IFTTTDeviceOrientation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDA74AC376BCF2A619F0EA554E43B853 /* IFTTTDeviceOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C31413F160738BCFA41504396F3BF71 /* IFTTTDeviceOrientation.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B6B2FE0145079D53AAECE6856BC81AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59174FC2BD2819E92A78AEBDF6A47161;
+			remoteInfo = FastttCamera;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		009ED2EAECD6226E89E47945EEE98EE5 /* Pods-SocialMosaic-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocialMosaic-resources.sh"; sourceTree = "<group>"; };
+		04292EFDB0607A80A13C22E642229678 /* Pods-SocialMosaic-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SocialMosaic-dummy.m"; sourceTree = "<group>"; };
+		04C9AF050C55E122E5AE1FA3B0BA1DC6 /* Pods-SocialMosaic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocialMosaic.release.xcconfig"; sourceTree = "<group>"; };
+		0FD97E559D358ECD24F363E51D3C2D2E /* AVCaptureDevice+FastttCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AVCaptureDevice+FastttCamera.m"; path = "FastttCamera/AVCaptureDevice+FastttCamera.m"; sourceTree = "<group>"; };
+		14FAB7062CD76CEFC7DCBFBF2FBBF097 /* FastttFocus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FastttFocus.m; path = FastttCamera/FastttFocus.m; sourceTree = "<group>"; };
+		15ECFCAECE3B55B3DBE5C9A5D265E8E1 /* Pods-SocialMosaic-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SocialMosaic-acknowledgements.plist"; sourceTree = "<group>"; };
+		2BF9AF5B2BDA1AB82C21CD116BA65275 /* Pods-SocialMosaic-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SocialMosaic-acknowledgements.markdown"; sourceTree = "<group>"; };
+		31EC6DAA5265E2F71BE6AE9F385518C4 /* FastttCamera-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FastttCamera-prefix.pch"; sourceTree = "<group>"; };
+		3C31413F160738BCFA41504396F3BF71 /* IFTTTDeviceOrientation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTDeviceOrientation.m; path = FastttCamera/IFTTTDeviceOrientation.m; sourceTree = "<group>"; };
+		3FE6E4A8644E43A25F1F99FFCE10E565 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		430CB0648084CE6F23B0D6764EE0B491 /* Pods-SocialMosaic-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocialMosaic-frameworks.sh"; sourceTree = "<group>"; };
+		5E22D8CBA0E1CE69A57E48E5D4CE218F /* libFastttCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFastttCamera.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		76EFCBA2042CC9D22430133B09507A92 /* FastttCapturedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FastttCapturedImage.h; path = FastttCamera/FastttCapturedImage.h; sourceTree = "<group>"; };
+		7F0BFB89A5B752FD6E36EC79D71C5C34 /* UIViewController+FastttCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+FastttCamera.h"; path = "FastttCamera/UIViewController+FastttCamera.h"; sourceTree = "<group>"; };
+		85C0F0F0484A25EF45A5DE1F4B17AB7F /* FastttCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FastttCamera-dummy.m"; sourceTree = "<group>"; };
+		88464A664811A7DF8FCB1B7DCF9F3482 /* FastttCameraInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FastttCameraInterface.h; path = FastttCamera/FastttCameraInterface.h; sourceTree = "<group>"; };
+		8E3897F9C74F986A2DAFAA1F330A9462 /* FastttZoom.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FastttZoom.m; path = FastttCamera/FastttZoom.m; sourceTree = "<group>"; };
+		A06B63733A9E0F0334B9A24EA9837468 /* FastttCapturedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FastttCapturedImage.m; path = FastttCamera/FastttCapturedImage.m; sourceTree = "<group>"; };
+		A128C3063A47C124358165CE1AAD4708 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		A281718A921F6769CB8138387E661B92 /* AVCaptureDevice+FastttCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AVCaptureDevice+FastttCamera.h"; path = "FastttCamera/AVCaptureDevice+FastttCamera.h"; sourceTree = "<group>"; };
+		AA0FA9C280BC565797D66332543E0F73 /* UIImage+FastttCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+FastttCamera.m"; path = "FastttCamera/UIImage+FastttCamera.m"; sourceTree = "<group>"; };
+		AED2AE4115048A4C04AA07CA2F24EC91 /* IFTTTDeviceOrientation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTDeviceOrientation.h; path = FastttCamera/IFTTTDeviceOrientation.h; sourceTree = "<group>"; };
+		B1AA6FAE861E2189E6977C385E9EC26F /* FastttCamera.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FastttCamera.xcconfig; sourceTree = "<group>"; };
+		B2F13D91C3990A2E7678B2FDF7652ED9 /* FastttCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FastttCamera.m; path = FastttCamera/FastttCamera.m; sourceTree = "<group>"; };
+		B39E0852DFFE016FC8A9C5B5C151CAC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B84AA7D946BFE85E707BCCE26939CD62 /* Pods-SocialMosaic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocialMosaic.debug.xcconfig"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB6C465D58F05B8FA0812646E1A439EC /* UIViewController+FastttCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+FastttCamera.m"; path = "FastttCamera/UIViewController+FastttCamera.m"; sourceTree = "<group>"; };
+		CCE0EDE69CABEED431987D50B444EB47 /* FastttCapturedImage+Process.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FastttCapturedImage+Process.m"; path = "FastttCamera/FastttCapturedImage+Process.m"; sourceTree = "<group>"; };
+		CF2E4E28951911A79A1FE92B56834BF4 /* FastttCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FastttCamera.h; path = FastttCamera/FastttCamera.h; sourceTree = "<group>"; };
+		DACB350A256ECF19824316841961CE96 /* UIImage+FastttCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+FastttCamera.h"; path = "FastttCamera/UIImage+FastttCamera.h"; sourceTree = "<group>"; };
+		DD649C576D70D68B09EC81FE098A7284 /* FastttCapturedImage+Process.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FastttCapturedImage+Process.h"; path = "FastttCamera/FastttCapturedImage+Process.h"; sourceTree = "<group>"; };
+		E0E7B73243B5BCD8AF8E60B38ABE4463 /* FastttZoom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FastttZoom.h; path = FastttCamera/FastttZoom.h; sourceTree = "<group>"; };
+		E6D4239F658851B0ACF21DEF0BC4A6CB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		F061B0A3C26467C9292D7E687FDBAC7A /* FastttFocus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FastttFocus.h; path = FastttCamera/FastttFocus.h; sourceTree = "<group>"; };
+		FBE8F413DB66D7F424FD8DCC886A9CD4 /* FastttCameraTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FastttCameraTypes.h; path = FastttCamera/FastttCameraTypes.h; sourceTree = "<group>"; };
+		FF0C9CF070E6D25897BA042606B801B9 /* libPods-SocialMosaic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialMosaic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		63FFBB9ACA5603AC98B970B020EA4D7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13530B7C08EB40456656139C071D244A /* AVFoundation.framework in Frameworks */,
+				0E15F64757F406DE18395D95024869C3 /* CoreMotion.framework in Frameworks */,
+				5E8B526E62D7471A18DD0AE32FF96F46 /* Foundation.framework in Frameworks */,
+				7A5A55FFE32A5776EA539D1B94B6E1B1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A20ECD980313BFFF79C6229B544485C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572EF44F7E107A7F47E1BA0FA7540C18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		09C5E90726D2521A760312DBF50D9358 /* Products */ = {
+		022C8172E6412EE956B6C035576C2230 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				5E22D8CBA0E1CE69A57E48E5D4CE218F /* libFastttCamera.a */,
+				FF0C9CF070E6D25897BA042606B801B9 /* libPods-SocialMosaic.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				909092D0E2AEE4974499122E83828FC9 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C47B296516E82035F7EFB677D3883ED /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				A281718A921F6769CB8138387E661B92 /* AVCaptureDevice+FastttCamera.h */,
+				0FD97E559D358ECD24F363E51D3C2D2E /* AVCaptureDevice+FastttCamera.m */,
+				CF2E4E28951911A79A1FE92B56834BF4 /* FastttCamera.h */,
+				B2F13D91C3990A2E7678B2FDF7652ED9 /* FastttCamera.m */,
+				88464A664811A7DF8FCB1B7DCF9F3482 /* FastttCameraInterface.h */,
+				FBE8F413DB66D7F424FD8DCC886A9CD4 /* FastttCameraTypes.h */,
+				76EFCBA2042CC9D22430133B09507A92 /* FastttCapturedImage.h */,
+				A06B63733A9E0F0334B9A24EA9837468 /* FastttCapturedImage.m */,
+				DD649C576D70D68B09EC81FE098A7284 /* FastttCapturedImage+Process.h */,
+				CCE0EDE69CABEED431987D50B444EB47 /* FastttCapturedImage+Process.m */,
+				F061B0A3C26467C9292D7E687FDBAC7A /* FastttFocus.h */,
+				14FAB7062CD76CEFC7DCBFBF2FBBF097 /* FastttFocus.m */,
+				E0E7B73243B5BCD8AF8E60B38ABE4463 /* FastttZoom.h */,
+				8E3897F9C74F986A2DAFAA1F330A9462 /* FastttZoom.m */,
+				AED2AE4115048A4C04AA07CA2F24EC91 /* IFTTTDeviceOrientation.h */,
+				3C31413F160738BCFA41504396F3BF71 /* IFTTTDeviceOrientation.m */,
+				DACB350A256ECF19824316841961CE96 /* UIImage+FastttCamera.h */,
+				AA0FA9C280BC565797D66332543E0F73 /* UIImage+FastttCamera.m */,
+				7F0BFB89A5B752FD6E36EC79D71C5C34 /* UIViewController+FastttCamera.h */,
+				BB6C465D58F05B8FA0812646E1A439EC /* UIViewController+FastttCamera.m */,
+			);
+			name = Default;
+			sourceTree = "<group>";
+		};
+		4269E99E31F10CDB86FE62A736FA57E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97ACF1AA2730716E9FEC90BA88BB1EC5 /* FastttCamera */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F1DBD2D58FE20220F7E29206B1B40A1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				981C1F88EFA6300836B4B67B1D184767 /* Pods-SocialMosaic */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				09C5E90726D2521A760312DBF50D9358 /* Products */,
-				F6CCA5D896907CE7506C37FD31FC265A /* Targets Support Files */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				4269E99E31F10CDB86FE62A736FA57E0 /* Pods */,
+				022C8172E6412EE956B6C035576C2230 /* Products */,
+				6F1DBD2D58FE20220F7E29206B1B40A1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F6CCA5D896907CE7506C37FD31FC265A /* Targets Support Files */ = {
+		909092D0E2AEE4974499122E83828FC9 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				E6D4239F658851B0ACF21DEF0BC4A6CB /* AVFoundation.framework */,
+				A128C3063A47C124358165CE1AAD4708 /* CoreMotion.framework */,
+				B39E0852DFFE016FC8A9C5B5C151CAC3 /* Foundation.framework */,
+				3FE6E4A8644E43A25F1F99FFCE10E565 /* UIKit.framework */,
 			);
-			name = "Targets Support Files";
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		97ACF1AA2730716E9FEC90BA88BB1EC5 /* FastttCamera */ = {
+			isa = PBXGroup;
+			children = (
+				3C47B296516E82035F7EFB677D3883ED /* Default */,
+				F74639D1F0E3FCA6524E83B64353DB7A /* Support Files */,
+			);
+			path = FastttCamera;
+			sourceTree = "<group>";
+		};
+		981C1F88EFA6300836B4B67B1D184767 /* Pods-SocialMosaic */ = {
+			isa = PBXGroup;
+			children = (
+				2BF9AF5B2BDA1AB82C21CD116BA65275 /* Pods-SocialMosaic-acknowledgements.markdown */,
+				15ECFCAECE3B55B3DBE5C9A5D265E8E1 /* Pods-SocialMosaic-acknowledgements.plist */,
+				04292EFDB0607A80A13C22E642229678 /* Pods-SocialMosaic-dummy.m */,
+				430CB0648084CE6F23B0D6764EE0B491 /* Pods-SocialMosaic-frameworks.sh */,
+				009ED2EAECD6226E89E47945EEE98EE5 /* Pods-SocialMosaic-resources.sh */,
+				B84AA7D946BFE85E707BCCE26939CD62 /* Pods-SocialMosaic.debug.xcconfig */,
+				04C9AF050C55E122E5AE1FA3B0BA1DC6 /* Pods-SocialMosaic.release.xcconfig */,
+			);
+			name = "Pods-SocialMosaic";
+			path = "Target Support Files/Pods-SocialMosaic";
+			sourceTree = "<group>";
+		};
+		F74639D1F0E3FCA6524E83B64353DB7A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1AA6FAE861E2189E6977C385E9EC26F /* FastttCamera.xcconfig */,
+				85C0F0F0484A25EF45A5DE1F4B17AB7F /* FastttCamera-dummy.m */,
+				31EC6DAA5265E2F71BE6AE9F385518C4 /* FastttCamera-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FastttCamera";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		660DA4795C2B617D4B9A5D399C0949FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				815C0E1A91459EC70FF5556265103A6E /* AVCaptureDevice+FastttCamera.h in Headers */,
+				216599001D0E171B855CCA5C54E69E4D /* FastttCamera.h in Headers */,
+				0F460C7C0CE2C72D39FE8878B0295253 /* FastttCameraInterface.h in Headers */,
+				021D7DF0F6E0D4F8EF9E4392D23DE848 /* FastttCameraTypes.h in Headers */,
+				BDDE318FAE68331FF83308C6ED3006AD /* FastttCapturedImage+Process.h in Headers */,
+				84D08408FB94F381F4C44104A65EC62E /* FastttCapturedImage.h in Headers */,
+				577877CA9299D4A409B278E81937D737 /* FastttFocus.h in Headers */,
+				A187F00A2E0390628AA6EB3A4E19CC15 /* FastttZoom.h in Headers */,
+				F110991AC76E8BB6195875A3852D03FA /* IFTTTDeviceOrientation.h in Headers */,
+				B7B285A9993225E13607088E6B1199E4 /* UIImage+FastttCamera.h in Headers */,
+				66958A955551493D56118B53D8639235 /* UIViewController+FastttCamera.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		59174FC2BD2819E92A78AEBDF6A47161 /* FastttCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB69EEF146C89565DA020B18C32F8274 /* Build configuration list for PBXNativeTarget "FastttCamera" */;
+			buildPhases = (
+				BE397CCC74A7C810C01EAA02F69BFE60 /* Sources */,
+				63FFBB9ACA5603AC98B970B020EA4D7F /* Frameworks */,
+				660DA4795C2B617D4B9A5D399C0949FB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FastttCamera;
+			productName = FastttCamera;
+			productReference = 5E22D8CBA0E1CE69A57E48E5D4CE218F /* libFastttCamera.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7E934570FB01CF3DFC3F7FD8BEAEB6E3 /* Pods-SocialMosaic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 598F78A8D3AC7EB2BF33F50374AB7AD5 /* Build configuration list for PBXNativeTarget "Pods-SocialMosaic" */;
+			buildPhases = (
+				1CABA328CF8164D7573DDA44683C6102 /* Sources */,
+				A20ECD980313BFFF79C6229B544485C3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AB8D2CBFB0A92486E60D0A830957CB7 /* PBXTargetDependency */,
+			);
+			name = "Pods-SocialMosaic";
+			productName = "Pods-SocialMosaic";
+			productReference = FF0C9CF070E6D25897BA042606B801B9 /* libPods-SocialMosaic.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
@@ -59,15 +301,90 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 09C5E90726D2521A760312DBF50D9358 /* Products */;
+			productRefGroup = 022C8172E6412EE956B6C035576C2230 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				59174FC2BD2819E92A78AEBDF6A47161 /* FastttCamera */,
+				7E934570FB01CF3DFC3F7FD8BEAEB6E3 /* Pods-SocialMosaic */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXSourcesBuildPhase section */
+		1CABA328CF8164D7573DDA44683C6102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D5F5289598A3F920E6A11B9BC31834F /* Pods-SocialMosaic-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE397CCC74A7C810C01EAA02F69BFE60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE75EB8F2CB107BA2030978462FF7676 /* AVCaptureDevice+FastttCamera.m in Sources */,
+				6EAF2ABD85D210CEF146B9D629824E51 /* FastttCamera-dummy.m in Sources */,
+				CADB9714A8533D8AF9A4C245551B1DFD /* FastttCamera.m in Sources */,
+				19A2F8060B39CB1933E7EFAD5EFDBE55 /* FastttCapturedImage+Process.m in Sources */,
+				027815F61DD062B67213B002BD83AE44 /* FastttCapturedImage.m in Sources */,
+				0981DD38C75C9F6A447A36817101726B /* FastttFocus.m in Sources */,
+				7633D60B58EB00408CC473687B7BFF6F /* FastttZoom.m in Sources */,
+				FDA74AC376BCF2A619F0EA554E43B853 /* IFTTTDeviceOrientation.m in Sources */,
+				0BD9E1373BEC9EF4204D17148526F6DA /* UIImage+FastttCamera.m in Sources */,
+				65C1D5FD91908CABBD0A0F60C7ADEF7C /* UIViewController+FastttCamera.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AB8D2CBFB0A92486E60D0A830957CB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FastttCamera;
+			target = 59174FC2BD2819E92A78AEBDF6A47161 /* FastttCamera */;
+			targetProxy = 3B6B2FE0145079D53AAECE6856BC81AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		3F9DFC701F0D6FB094825B090A0910DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1AA6FAE861E2189E6977C385E9EC26F /* FastttCamera.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FastttCamera/FastttCamera-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5D9486F7361FEB656AB2DD16D8AEDFE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1AA6FAE861E2189E6977C385E9EC26F /* FastttCamera.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FastttCamera/FastttCamera-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -107,6 +424,23 @@
 			};
 			name = Debug;
 		};
+		C1E46E8AF7F0D6AF7388A68A858D99B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B84AA7D946BFE85E707BCCE26939CD62 /* Pods-SocialMosaic.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		E43846B588E1892F3093F3B7082B6DFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -141,6 +475,23 @@
 			};
 			name = Release;
 		};
+		FE130287163291371AB9C057FC63CB91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04C9AF050C55E122E5AE1FA3B0BA1DC6 /* Pods-SocialMosaic.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -149,6 +500,24 @@
 			buildConfigurations = (
 				C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */,
 				E43846B588E1892F3093F3B7082B6DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		598F78A8D3AC7EB2BF33F50374AB7AD5 /* Build configuration list for PBXNativeTarget "Pods-SocialMosaic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1E46E8AF7F0D6AF7388A68A858D99B4 /* Debug */,
+				FE130287163291371AB9C057FC63CB91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB69EEF146C89565DA020B18C32F8274 /* Build configuration list for PBXNativeTarget "FastttCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F9DFC701F0D6FB094825B090A0910DD /* Debug */,
+				5D9486F7361FEB656AB2DD16D8AEDFE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
