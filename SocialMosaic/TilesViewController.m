@@ -59,4 +59,12 @@ int const TilesPerRow = 5;
     [cell addSubview:self.camera.view];
     self.camera.view.frame = cell.bounds;
 }
+
+- (IBAction)onShutterButton:(id)sender {
+    [self.camera takePicture];
+}
+
+- (void)cameraController:(id<FastttCameraInterface>)cameraController didFinishNormalizingCapturedImage:(FastttCapturedImage *)capturedImage {
+    NSLog(@"didFinishNormalizingCapturedImage");
+}
 @end

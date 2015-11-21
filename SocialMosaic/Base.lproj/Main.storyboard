@@ -50,16 +50,26 @@
                                     <constraint firstAttribute="width" secondItem="ePS-Ff-Gq7" secondAttribute="height" multiplier="1:1" id="ta8-eh-X7V"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-Bf-fXv">
+                                <rect key="frame" x="283" y="570" width="35" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Snap"/>
+                                <connections>
+                                    <action selector="onShutterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6tH-xI-gFg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DTB-Bf-fXv" secondAttribute="bottom" id="QhY-dA-yAd"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RhI-Hz-Bu7"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W2M-um-0TP"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerY" secondItem="AHE-TT-9qL" secondAttribute="centerY" id="Yub-MA-vU4"/>
                             <constraint firstAttribute="trailing" secondItem="ePS-Ff-Gq7" secondAttribute="trailing" id="c1N-RS-aY3"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g6K-M0-OOP"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="width" secondItem="AHE-TT-9qL" secondAttribute="width" id="mKK-VB-ttc"/>
+                            <constraint firstItem="DTB-Bf-fXv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uQY-GY-fW9"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerX" secondItem="AHE-TT-9qL" secondAttribute="centerX" id="vaw-P3-PPa"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="height" secondItem="AHE-TT-9qL" secondAttribute="height" id="xjb-N0-leM"/>
                         </constraints>
