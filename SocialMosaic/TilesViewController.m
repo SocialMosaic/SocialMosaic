@@ -73,6 +73,18 @@ int const TilesPerRow = 5;
     }
 }
 
+- (IBAction)onSaveButton:(id)sender {
+    [self saveMosaic];
+}
+
+- (void)saveMosaic {
+    UIGraphicsBeginImageContext(self.collectionView.frame.size);
+    [self.collectionView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *mosaic = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageWriteToSavedPhotosAlbum(mosaic, nil, nil, nil);
+}
+
 - (void)cameraController:(id<FastttCameraInterface>)cameraController didFinishCapturingImage:(FastttCapturedImage *)capturedImage {
     UIImageView *imageView = [[UIImageView alloc] initWithImage:capturedImage.rotatedPreviewImage];
     [self.cameraCell addSubview:imageView];
