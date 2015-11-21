@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1FF0B91C00382A00E9E98F /* TileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1FF0B71C00382A00E9E98F /* TileCell.xib */; };
+		3A1FF0BC1C003AEF00E9E98F /* TileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1FF0BB1C003AEF00E9E98F /* TileCell.m */; };
 		EC5440961BFEC463001E3005 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5440951BFEC463001E3005 /* GridView.m */; };
 		ECFEE9551BFEA7EB004E04AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFEE9541BFEA7EB004E04AF /* main.m */; };
 		ECFEE9581BFEA7EB004E04AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFEE9571BFEA7EB004E04AF /* AppDelegate.m */; };
@@ -19,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		15D9EDF2DEC11295384D79FF /* libPods-SocialMosaic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialMosaic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1FF0B71C00382A00E9E98F /* TileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TileCell.xib; sourceTree = "<group>"; };
+		3A1FF0BA1C003AEF00E9E98F /* TileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCell.h; sourceTree = "<group>"; };
+		3A1FF0BB1C003AEF00E9E98F /* TileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileCell.m; sourceTree = "<group>"; };
 		A3FA0419CCF5C74A0517EEAD /* Pods-SocialMosaic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMosaic.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMosaic/Pods-SocialMosaic.release.xcconfig"; sourceTree = "<group>"; };
 		D6B8128100371E815BC8DF80 /* Pods-SocialMosaic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMosaic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMosaic/Pods-SocialMosaic.debug.xcconfig"; sourceTree = "<group>"; };
 		EC5440941BFEC463001E3005 /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
@@ -78,6 +83,9 @@
 			children = (
 				EC5440941BFEC463001E3005 /* GridView.h */,
 				EC5440951BFEC463001E3005 /* GridView.m */,
+				3A1FF0BA1C003AEF00E9E98F /* TileCell.h */,
+				3A1FF0BB1C003AEF00E9E98F /* TileCell.m */,
+				3A1FF0B71C00382A00E9E98F /* TileCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 				ECFEE9631BFEA7EB004E04AF /* LaunchScreen.storyboard in Resources */,
 				ECFEE9601BFEA7EB004E04AF /* Assets.xcassets in Resources */,
 				ECFEE95E1BFEA7EB004E04AF /* Main.storyboard in Resources */,
+				3A1FF0B91C00382A00E9E98F /* TileCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +257,7 @@
 			files = (
 				ECFEE95B1BFEA7EB004E04AF /* TilesViewController.m in Sources */,
 				ECFEE9581BFEA7EB004E04AF /* AppDelegate.m in Sources */,
+				3A1FF0BC1C003AEF00E9E98F /* TileCell.m in Sources */,
 				EC5440961BFEC463001E3005 /* GridView.m in Sources */,
 				ECFEE9551BFEA7EB004E04AF /* main.m in Sources */,
 			);

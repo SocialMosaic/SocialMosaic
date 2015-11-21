@@ -8,6 +8,7 @@
 
 #import <FastttCamera.h>
 #import "GridView.h"
+#import "TileCell.h"
 #import "TilesViewController.h"
 
 int const TilesPerRow = 5;
@@ -16,7 +17,7 @@ int const TilesPerRow = 5;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet GridView *gridView;
 @property (strong, nonatomic) FastttCamera *camera;
-@property (weak, nonatomic) UICollectionViewCell *cameraCell;
+@property (weak, nonatomic) TileCell *cameraCell;
 @property (nonatomic) int tilesPerRow;
 @end
 
@@ -27,10 +28,14 @@ int const TilesPerRow = 5;
 
     self.tilesPerRow = TilesPerRow;
     self.gridView.cellsAcross = self.tilesPerRow;
+    [self initCollectionView];
+    [self initCamera];
+}
+
+- (void)initCollectionView {
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
-
-    [self initCamera];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"TileCell" bundle:nil] forCellWithReuseIdentifier:@"TileCell"];
 }
 
 - (void)initCamera {
@@ -56,13 +61,14 @@ int const TilesPerRow = 5;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    self.cameraCell = [collectionView cellForItemAtIndexPath:indexPath];
+    self.cameraCell = (TileCell *)[collectionView cellForItemAtIndexPath:indexPath];;
 }
 
-- (void)setCameraCell:(UICollectionViewCell *)cameraCell {
+- (void)setCameraCell:(TileCell *)cameraCell {
     _cameraCell = cameraCell;
+    [self.camera.view removeFromSuperview];
     if (cameraCell) {
-        [cameraCell addSubview:self.camera.view];
+        [cameraCell.cameraView addSubview:self.camera.view];
         self.camera.view.frame = cameraCell.bounds;
     }
 }
@@ -86,9 +92,7 @@ int const TilesPerRow = 5;
 }
 
 - (void)cameraController:(id<FastttCameraInterface>)cameraController didFinishCapturingImage:(FastttCapturedImage *)capturedImage {
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:capturedImage.rotatedPreviewImage];
-    [self.cameraCell addSubview:imageView];
-    imageView.frame = self.cameraCell.bounds;
+    self.cameraCell.imageView.image = capturedImage.rotatedPreviewImage;
     self.cameraCell = nil;
 }
 @end
