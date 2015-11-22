@@ -12,7 +12,8 @@
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, 1.0f);
-    CGContextSetStrokeColorWithColor(context, [[UIColor lightGrayColor] CGColor]);
+    UIColor *gridColor = [UIColor colorWithWhite:0.0 alpha:0.15];
+    CGContextSetStrokeColorWithColor(context, [gridColor CGColor]);
     
     for (int i = 1; i < self.cellsAcross; i++) {
         [self drawColumnNumber:i context:context];
