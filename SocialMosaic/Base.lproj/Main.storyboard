@@ -67,19 +67,29 @@
                                     <action selector="onShutterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6tH-xI-gFg"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="MaI-Nq-h3J">
+                                <rect key="frame" x="69" y="570" width="463" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="changeGridSizeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="N9F-GJ-m3U"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DTB-Bf-fXv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BDY-6B-Uqi"/>
+                            <constraint firstItem="yts-7N-m6F" firstAttribute="leading" secondItem="MaI-Nq-h3J" secondAttribute="trailing" constant="16" id="Nja-pn-vFT"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RhI-Hz-Bu7"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W2M-um-0TP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yts-7N-m6F" secondAttribute="trailing" id="WyA-2c-maF"/>
+                            <constraint firstItem="MaI-Nq-h3J" firstAttribute="leading" secondItem="DTB-Bf-fXv" secondAttribute="trailing" constant="16" id="YdS-P9-B0n"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerY" secondItem="AHE-TT-9qL" secondAttribute="centerY" id="Yub-MA-vU4"/>
                             <constraint firstAttribute="trailing" secondItem="ePS-Ff-Gq7" secondAttribute="trailing" id="c1N-RS-aY3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DTB-Bf-fXv" secondAttribute="bottom" id="fz9-CT-b3p"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g6K-M0-OOP"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="width" secondItem="AHE-TT-9qL" secondAttribute="width" id="mKK-VB-ttc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MaI-Nq-h3J" secondAttribute="bottom" id="pJO-Kl-Y8p"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yts-7N-m6F" secondAttribute="bottom" id="qbf-s8-bb1"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerX" secondItem="AHE-TT-9qL" secondAttribute="centerX" id="vaw-P3-PPa"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="height" secondItem="AHE-TT-9qL" secondAttribute="height" id="xjb-N0-leM"/>
@@ -87,6 +97,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="AHE-TT-9qL" id="OXd-um-rK9"/>
+                        <outlet property="gridSizeSlider" destination="MaI-Nq-h3J" id="Afk-iv-ZKL"/>
                         <outlet property="gridView" destination="ePS-Ff-Gq7" id="3ju-TX-acB"/>
                     </connections>
                 </viewController>

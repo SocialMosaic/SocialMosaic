@@ -16,9 +16,11 @@ int const TilesPerRow = 5;
 @interface TilesViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet GridView *gridView;
+@property (weak, nonatomic) IBOutlet UISlider *gridSizeSlider;
 @property (strong, nonatomic) FastttCamera *camera;
 @property (weak, nonatomic) TileCell *cameraCell;
 @property (nonatomic) int tilesPerRow;
+- (IBAction)changeGridSizeSlider:(UISlider *)sender;
 @end
 
 @implementation TilesViewController
@@ -28,6 +30,7 @@ int const TilesPerRow = 5;
 
     self.tilesPerRow = TilesPerRow;
     self.gridView.cellsAcross = self.tilesPerRow;
+    self.gridSizeSlider.value = self.tilesPerRow;
     [self initCollectionView];
     [self initCamera];
 }
@@ -44,6 +47,11 @@ int const TilesPerRow = 5;
     [self.camera willMoveToParentViewController:self];
     [self addChildViewController:self.camera];
     [self.camera didMoveToParentViewController:self];
+}
+
+- (void)setTilesPerRow:(int)tilesPerRow {
+    _tilesPerRow = tilesPerRow;
+    self.gridView.cellsAcross = tilesPerRow;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,5 +102,9 @@ int const TilesPerRow = 5;
 - (void)cameraController:(id<FastttCameraInterface>)cameraController didFinishCapturingImage:(FastttCapturedImage *)capturedImage {
     self.cameraCell.imageView.image = capturedImage.rotatedPreviewImage;
     self.cameraCell = nil;
+}
+
+- (IBAction)changeGridSizeSlider:(UISlider *)sender {
+    self.tilesPerRow = roundf(sender.value);
 }
 @end

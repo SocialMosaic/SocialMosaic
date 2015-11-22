@@ -45,4 +45,9 @@
     CGContextAddLineToPoint(context, endPoint.x, endPoint.y);
     CGContextStrokePath(context);
 }
+
+- (void)setCellsAcross:(int)cellsAcross {
+    _cellsAcross = cellsAcross;
+    [self setNeedsDisplay];
+}
 @end
