@@ -19,10 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-Sc-u1c">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AHE-TT-9qL">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="YWg-We-ykU">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -78,9 +82,11 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="width" secondItem="eVJ-Sc-u1c" secondAttribute="width" id="1v7-Fa-C0j"/>
                             <constraint firstItem="DTB-Bf-fXv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BDY-6B-Uqi"/>
                             <constraint firstItem="yts-7N-m6F" firstAttribute="leading" secondItem="MaI-Nq-h3J" secondAttribute="trailing" constant="16" id="Nja-pn-vFT"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RhI-Hz-Bu7"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="height" secondItem="eVJ-Sc-u1c" secondAttribute="height" id="SnO-My-vDn"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W2M-um-0TP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yts-7N-m6F" secondAttribute="trailing" id="WyA-2c-maF"/>
                             <constraint firstItem="MaI-Nq-h3J" firstAttribute="leading" secondItem="DTB-Bf-fXv" secondAttribute="trailing" constant="16" id="YdS-P9-B0n"/>
@@ -89,9 +95,11 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DTB-Bf-fXv" secondAttribute="bottom" id="fz9-CT-b3p"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g6K-M0-OOP"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="width" secondItem="AHE-TT-9qL" secondAttribute="width" id="mKK-VB-ttc"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerX" secondItem="eVJ-Sc-u1c" secondAttribute="centerX" id="mry-6D-if3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MaI-Nq-h3J" secondAttribute="bottom" id="pJO-Kl-Y8p"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yts-7N-m6F" secondAttribute="bottom" id="qbf-s8-bb1"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerX" secondItem="AHE-TT-9qL" secondAttribute="centerX" id="vaw-P3-PPa"/>
+                            <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerY" secondItem="eVJ-Sc-u1c" secondAttribute="centerY" id="wkA-yK-tz9"/>
                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="height" secondItem="AHE-TT-9qL" secondAttribute="height" id="xjb-N0-leM"/>
                         </constraints>
                     </view>
@@ -106,4 +114,7 @@
             <point key="canvasLocation" x="602" y="378"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sample" width="958" height="628"/>
+    </resources>
 </document>
