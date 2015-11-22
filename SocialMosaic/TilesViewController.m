@@ -52,6 +52,8 @@ int const TilesPerRow = 5;
 - (void)setTilesPerRow:(int)tilesPerRow {
     _tilesPerRow = tilesPerRow;
     self.gridView.cellsAcross = tilesPerRow;
+    self.cameraCell = nil;
+    [self.collectionView reloadData];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
