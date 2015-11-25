@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ChooserImageCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="odA-EH-CUp">
+                        <rect key="frame" x="8" y="8" width="128" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="128" id="Sf7-zS-muF"/>
+                            <constraint firstAttribute="height" constant="128" id="rHT-zv-5nD"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="odA-EH-CUp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="7K0-9J-Til"/>
+                <constraint firstAttribute="trailing" secondItem="odA-EH-CUp" secondAttribute="trailing" constant="8" id="OWl-Jg-WQP"/>
+                <constraint firstItem="odA-EH-CUp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="QoT-JI-dfF"/>
+                <constraint firstAttribute="bottom" secondItem="odA-EH-CUp" secondAttribute="bottom" constant="8" id="h6I-DN-nb4"/>
+            </constraints>
+            <size key="customSize" width="156" height="165"/>
+            <connections>
+                <outlet property="chooserImageView" destination="odA-EH-CUp" id="0Dq-22-9A6"/>
+            </connections>
+            <point key="canvasLocation" x="270" y="585.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
