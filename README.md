@@ -3,12 +3,12 @@
 Social Mosaic is an app that allows users to upload photos to fill in "tiles" of a larger photo to create a mosaic that reproduces the original photo... socially.
 
 ## MVP
-- [ ] Show a collection of images
-- [ ] User can select an image from collection
-- [ ] Show a grid overlay on the full screen image
-- [ ] User can tap a tile to take a photo for the tile
-- [ ] Taking a photo for a tile should save the tile in place, and return to the grid screen
-- [ ] User can save the current photo at any time
+- [X] Show a collection of images
+- [X] User can select an image from collection
+- [X] Show a grid overlay on the full screen image
+- [X] User can tap a tile to take a photo for the tile
+- [X] Taking a photo for a tile should save the tile in place, and return to the grid screen
+- [X] User can save the current photo at any time
 
 ## Persistence
 - [ ] Show a welcome screen with option to start a new project
