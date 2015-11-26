@@ -8,42 +8,47 @@
 
 #import "GridView.h"
 
+@interface GridView ()
+@property (nonatomic) CGContextRef context;
+@end
+
 @implementation GridView
 - (void)drawRect:(CGRect)rect {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, 2.0f);
+    self.context = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(self.context, 2.0f);
     UIColor *gridColor = [UIColor colorWithWhite:1 alpha:0.2];
-    CGContextSetStrokeColorWithColor(context, [gridColor CGColor]);
+    CGContextSetStrokeColorWithColor(self.context, [gridColor CGColor]);
     
     for (int i = 1; i < self.cellsAcross; i++) {
-        [self drawColumnNumber:i context:context];
+        [self createLineForColumnNumber:i];
     }
     
     for (int i = 1; i < self.cellsAcross; i++) {
-        [self drawRowNumber:i context:context];
+        [self createLineForRowNumber:i];
     }
+
+    CGContextStrokePath(self.context);
 }
 
-- (void)drawColumnNumber:(int)number context:(CGContextRef)context {
+- (void)createLineForColumnNumber:(int)number {
     CGPoint startPoint = CGPointMake([self getCellSize] * number, 0.0f);
     CGPoint endPoint = CGPointMake(startPoint.x, self.frame.size.height);
-    [self drawLineWithContext:context startPoint:startPoint endPoint:endPoint];
+    [self createLineWithStartPoint:startPoint endPoint:endPoint];
 }
 
-- (void)drawRowNumber:(int)number context:(CGContextRef)context {
+- (void)createLineForRowNumber:(int)number {
     CGPoint startPoint = CGPointMake(0.0f, [self getCellSize] * number);
     CGPoint endPoint = CGPointMake(self.frame.size.width, startPoint.y);
-    [self drawLineWithContext:context startPoint:startPoint endPoint:endPoint];
+    [self createLineWithStartPoint:startPoint endPoint:endPoint];
 }
 
 - (CGFloat)getCellSize {
     return self.frame.size.width / self.cellsAcross;
 }
 
-- (void)drawLineWithContext:(CGContextRef)context startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint {
-    CGContextMoveToPoint(context, startPoint.x, startPoint.y);
-    CGContextAddLineToPoint(context, endPoint.x, endPoint.y);
-    CGContextStrokePath(context);
+- (void)createLineWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint {
+    CGContextMoveToPoint(self.context, startPoint.x, startPoint.y);
+    CGContextAddLineToPoint(self.context, endPoint.x, endPoint.y);
 }
 
 - (void)setCellsAcross:(int)cellsAcross {
