@@ -13,7 +13,8 @@
 
 int const TilesPerRow = 5;
 
-@interface TilesViewController ()
+@interface TilesViewController () <FastttCameraDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *mosaicTemplateImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet GridView *gridView;
 @property (weak, nonatomic) IBOutlet UISlider *gridSizeSlider;
@@ -31,6 +32,7 @@ int const TilesPerRow = 5;
     self.tilesPerRow = TilesPerRow;
     self.gridView.cellsAcross = self.tilesPerRow;
     self.gridSizeSlider.value = self.tilesPerRow;
+    [self.mosaicTemplateImageView setImage:self.mosaicTemplateImage];
     [self initCollectionView];
     [self initCamera];
 }
@@ -54,6 +56,11 @@ int const TilesPerRow = 5;
     self.gridView.cellsAcross = tilesPerRow;
     self.cameraCell = nil;
     [self.collectionView reloadData];
+}
+
+- (void)setMosaicTemplateImage:(UIImage *)mosaicTemplateImage {
+    _mosaicTemplateImage = mosaicTemplateImage;
+    [self.mosaicTemplateImageView setImage:mosaicTemplateImage];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

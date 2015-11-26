@@ -7,11 +7,13 @@
 //
 
 #import "GalleryViewController.h"
+#import "TilesViewController.h"
 #import "ChooserImageCollectionViewCell.h"
 
 @interface GalleryViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *galleryCollectionView;
 @property (strong, nonatomic) NSArray *sampleImages;
+@property (strong, nonatomic) UIImage *selectedImage;
 
 @end
 
@@ -23,7 +25,7 @@
     self.galleryCollectionView.dataSource = self;
     self.galleryCollectionView.delegate = self;
     [self.galleryCollectionView registerNib:[UINib nibWithNibName:@"ChooserImageCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"chooserImage"];
-
+    [self.galleryCollectionView selectItemAtIndexPath:[NSIndexPath indexPathWithIndex:0] animated:YES scrollPosition:UICollectionViewScrollPositionTop];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -38,15 +40,19 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     ChooserImageCollectionViewCell *cell = (ChooserImageCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    // TODO: Refactor into cell
-    [cell.chooserImageView.layer setBorderColor: [[UIColor blackColor] CGColor]];
-    [cell.chooserImageView.layer setBorderWidth: 2.0];
+    cell.outlined = YES;
+    self.selectedImage = cell.chooserImageView.image;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    // TODO: Refactor into cell
     ChooserImageCollectionViewCell *cell = (ChooserImageCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    [cell.chooserImageView.layer setBorderWidth:0.0];
+    cell.outlined = NO;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    TilesViewController *vc = (TilesViewController *)[segue destinationViewController];
+    NSLog(@"PREPARING FOR SEGUE");
+    [vc setMosaicTemplateImage:self.selectedImage];
 }
 
 - (void)didReceiveMemoryWarning {

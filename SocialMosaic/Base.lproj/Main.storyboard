@@ -107,6 +107,7 @@
                         <outlet property="collectionView" destination="AHE-TT-9qL" id="OXd-um-rK9"/>
                         <outlet property="gridSizeSlider" destination="MaI-Nq-h3J" id="Afk-iv-ZKL"/>
                         <outlet property="gridView" destination="ePS-Ff-Gq7" id="3ju-TX-acB"/>
+                        <outlet property="mosaicTemplateImageView" destination="eVJ-Sc-u1c" id="USj-bc-zLE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

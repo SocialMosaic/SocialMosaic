@@ -8,5 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TilesViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, FastttCameraDelegate>
+@interface TilesViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@property (strong, nonatomic) UIImage *mosaicTemplateImage;
 @end

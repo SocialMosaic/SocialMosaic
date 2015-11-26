@@ -10,5 +10,5 @@
 
 @interface ChooserImageCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *chooserImageView;
-
+@property (nonatomic, assign) BOOL outlined;
 @end
