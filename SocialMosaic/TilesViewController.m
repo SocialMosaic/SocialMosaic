@@ -21,7 +21,6 @@ int const TilesPerRow = 5;
 @property (strong, nonatomic) FastttCamera *camera;
 @property (weak, nonatomic) TileCell *cameraCell;
 @property (nonatomic) int tilesPerRow;
-- (IBAction)changeGridSizeSlider:(UISlider *)sender;
 @end
 
 @implementation TilesViewController
@@ -31,7 +30,7 @@ int const TilesPerRow = 5;
 
     self.tilesPerRow = TilesPerRow;
     self.gridView.cellsAcross = self.tilesPerRow;
-    self.gridSizeSlider.value = self.tilesPerRow;
+    [self initGridSizeSlider];
     [self.mosaicTemplateImageView setImage:self.mosaicTemplateImage];
     [self initCollectionView];
     [self initCamera];
@@ -49,6 +48,16 @@ int const TilesPerRow = 5;
     [self.camera willMoveToParentViewController:self];
     [self addChildViewController:self.camera];
     [self.camera didMoveToParentViewController:self];
+}
+
+- (void)initGridSizeSlider {
+    self.gridSizeSlider.value = self.tilesPerRow;
+    [self.gridSizeSlider addTarget:self
+                            action:@selector(gridSizeSliderDidChange:)
+                  forControlEvents:UIControlEventValueChanged];
+    [self.gridSizeSlider addTarget:self
+                            action:@selector(gridSizeSliderDidFinishChanging:)
+                  forControlEvents:(UIControlEventTouchUpInside | UIControlEventTouchUpOutside)];
 }
 
 - (void)setTilesPerRow:(int)tilesPerRow {
@@ -113,7 +122,11 @@ int const TilesPerRow = 5;
     self.cameraCell = nil;
 }
 
-- (IBAction)changeGridSizeSlider:(UISlider *)sender {
+- (void)gridSizeSliderDidChange:(UISlider *)sender {
+    self.gridView.cellsAcross = roundf(sender.value);
+}
+
+- (void)gridSizeSliderDidFinishChanging:(UISlider *)sender {
     self.tilesPerRow = roundf(sender.value);
 }
 @end

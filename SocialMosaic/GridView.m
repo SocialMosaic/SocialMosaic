@@ -11,8 +11,8 @@
 @implementation GridView
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, 1.0f);
-    UIColor *gridColor = [UIColor colorWithWhite:0.0 alpha:0.15];
+    CGContextSetLineWidth(context, 2.0f);
+    UIColor *gridColor = [UIColor colorWithWhite:1 alpha:0.2];
     CGContextSetStrokeColorWithColor(context, [gridColor CGColor]);
     
     for (int i = 1; i < self.cellsAcross; i++) {
