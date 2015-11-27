@@ -6,5 +6,9 @@
 target 'SocialMosaic' do
   pod 'FastttCamera'
   pod 'Parse'
+  pod 'ParseFacebookUtilsV4'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit' 
 end
 

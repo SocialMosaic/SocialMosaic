@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="1314" y="327"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="DX9-ck-Qf4">
             <objects>
-                <viewController id="olQ-fl-WrZ" sceneMemberID="viewController">
+                <viewController id="olQ-fl-WrZ" customClass="WelcomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BAT-AC-QZY"/>
                         <viewControllerLayoutGuide type="bottom" id="bWj-hz-5BP"/>
