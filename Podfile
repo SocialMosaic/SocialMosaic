@@ -5,5 +5,6 @@
 
 target 'SocialMosaic' do
   pod 'FastttCamera'
+  pod 'Parse'
 end
 

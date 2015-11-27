@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A1FF0B91C00382A00E9E98F /* TileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1FF0B71C00382A00E9E98F /* TileCell.xib */; };
 		3A1FF0BC1C003AEF00E9E98F /* TileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1FF0BB1C003AEF00E9E98F /* TileCell.m */; };
+		C40278981C082EC2006F4938 /* Secrets.h.example in Resources */ = {isa = PBXBuildFile; fileRef = C40278971C082EC2006F4938 /* Secrets.h.example */; };
 		C4E718071C06762600240801 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E718061C06762600240801 /* GalleryViewController.m */; };
 		C4E7180E1C0677C800240801 /* ChooserImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7180C1C0677C800240801 /* ChooserImageCollectionViewCell.m */; };
 		C4E7180F1C0677C800240801 /* ChooserImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E7180D1C0677C800240801 /* ChooserImageCollectionViewCell.xib */; };
@@ -28,6 +29,8 @@
 		3A1FF0BA1C003AEF00E9E98F /* TileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCell.h; sourceTree = "<group>"; };
 		3A1FF0BB1C003AEF00E9E98F /* TileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileCell.m; sourceTree = "<group>"; };
 		A3FA0419CCF5C74A0517EEAD /* Pods-SocialMosaic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMosaic.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMosaic/Pods-SocialMosaic.release.xcconfig"; sourceTree = "<group>"; };
+		C40278961C082EC2006F4938 /* Secrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
+		C40278971C082EC2006F4938 /* Secrets.h.example */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Secrets.h.example; sourceTree = "<group>"; };
 		C4E718051C06762600240801 /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
 		C4E718061C06762600240801 /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 		C4E7180B1C0677C800240801 /* ChooserImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooserImageCollectionViewCell.h; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 		ECFEE9531BFEA7EB004E04AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C40278961C082EC2006F4938 /* Secrets.h */,
+				C40278971C082EC2006F4938 /* Secrets.h.example */,
 				ECFEE9541BFEA7EB004E04AF /* main.m */,
 			);
 			name = "Supporting Files";
@@ -210,6 +215,7 @@
 				ECFEE9631BFEA7EB004E04AF /* LaunchScreen.storyboard in Resources */,
 				ECFEE9601BFEA7EB004E04AF /* Assets.xcassets in Resources */,
 				ECFEE95E1BFEA7EB004E04AF /* Main.storyboard in Resources */,
+				C40278981C082EC2006F4938 /* Secrets.h.example in Resources */,
 				3A1FF0B91C00382A00E9E98F /* TileCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

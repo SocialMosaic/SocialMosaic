@@ -6,7 +6,9 @@
 //  Copyright © 2015 SocialMosaic. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "AppDelegate.h"
+#import "Secrets.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [Parse setApplicationId:SOCIAL_MOSAIC_PARSE_APP_ID
+                  clientKey:SOCIAL_MOSAIC_PARSE_CLIENT_KEY];
     return YES;
 }
 
