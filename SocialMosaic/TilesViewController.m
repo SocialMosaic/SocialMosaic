@@ -21,6 +21,8 @@ int const TilesPerRow = 5;
 @property (strong, nonatomic) FastttCamera *camera;
 @property (weak, nonatomic) TileCell *cameraCell;
 @property (nonatomic) int tilesPerRow;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *zoomableView;
 @end
 
 @implementation TilesViewController
@@ -30,10 +32,21 @@ int const TilesPerRow = 5;
 
     self.tilesPerRow = TilesPerRow;
     self.gridView.cellsAcross = self.tilesPerRow;
-    [self initGridSizeSlider];
     [self.mosaicTemplateImageView setImage:self.mosaicTemplateImage];
+    [self initGridSizeSlider];
     [self initCollectionView];
     [self initCamera];
+    [self initScrollView];
+}
+
+- (void)initGridSizeSlider {
+    self.gridSizeSlider.value = self.tilesPerRow;
+    [self.gridSizeSlider addTarget:self
+                            action:@selector(gridSizeSliderDidChange:)
+                  forControlEvents:UIControlEventValueChanged];
+    [self.gridSizeSlider addTarget:self
+                            action:@selector(gridSizeSliderDidFinishChanging:)
+                  forControlEvents:(UIControlEventTouchUpInside | UIControlEventTouchUpOutside)];
 }
 
 - (void)initCollectionView {
@@ -50,14 +63,8 @@ int const TilesPerRow = 5;
     [self.camera didMoveToParentViewController:self];
 }
 
-- (void)initGridSizeSlider {
-    self.gridSizeSlider.value = self.tilesPerRow;
-    [self.gridSizeSlider addTarget:self
-                            action:@selector(gridSizeSliderDidChange:)
-                  forControlEvents:UIControlEventValueChanged];
-    [self.gridSizeSlider addTarget:self
-                            action:@selector(gridSizeSliderDidFinishChanging:)
-                  forControlEvents:(UIControlEventTouchUpInside | UIControlEventTouchUpOutside)];
+- (void)initScrollView {
+    self.scrollView.delegate = self;
 }
 
 - (void)setTilesPerRow:(int)tilesPerRow {
@@ -128,5 +135,9 @@ int const TilesPerRow = 5;
 
 - (void)gridSizeSliderDidFinishChanging:(UISlider *)sender {
     self.tilesPerRow = roundf(sender.value);
+}
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return self.zoomableView;
 }
 @end
