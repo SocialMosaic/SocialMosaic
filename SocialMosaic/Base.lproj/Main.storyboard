@@ -28,6 +28,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-Sc-u1c">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                                 <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </imageView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AHE-TT-9qL">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -60,7 +61,7 @@
                                             </view>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="eVJ-Sc-u1c" firstAttribute="height" secondItem="XIy-fM-nn0" secondAttribute="height" id="2kB-pD-Zzq"/>
@@ -79,6 +80,7 @@
                                     </view>
                                 </subviews>
                                 <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="XIy-fM-nn0" firstAttribute="top" secondItem="AEw-KA-4wB" secondAttribute="top" id="3Jb-w4-PPK"/>
                                     <constraint firstAttribute="bottom" secondItem="XIy-fM-nn0" secondAttribute="bottom" id="Hmc-aa-YSJ"/>
