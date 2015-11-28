@@ -72,7 +72,12 @@ int const TilesPerRow = 5;
     self.gridView.cellsAcross = tilesPerRow;
     self.cameraCell = nil;
     [self.collectionView reloadData];
-    self.scrollView.maximumZoomScale = tilesPerRow;
+
+    CGFloat newMaximumZoomScale = (float)self.tilesPerRow / 2.0;
+    if (self.scrollView.zoomScale > newMaximumZoomScale) {
+        [self.scrollView setZoomScale:newMaximumZoomScale animated:YES];
+    }
+    self.scrollView.maximumZoomScale = newMaximumZoomScale;
 }
 
 - (void)setMosaicTemplateImage:(UIImage *)mosaicTemplateImage {
