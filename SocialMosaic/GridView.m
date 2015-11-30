@@ -51,7 +51,7 @@
     CGContextAddLineToPoint(self.context, endPoint.x, endPoint.y);
 }
 
-- (void)setCellsAcross:(int)cellsAcross {
+- (void)setCellsAcross:(NSInteger)cellsAcross {
     _cellsAcross = cellsAcross;
     [self setNeedsDisplay];
 }

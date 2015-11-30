@@ -11,18 +11,22 @@
 #import "TileCell.h"
 #import "TilesViewController.h"
 
-int const TilesPerRow = 5;
+CGFloat const MinimumZoomScale = 1.0;
+NSInteger const TilesPerRow = 5;
 
-@interface TilesViewController () <FastttCameraDelegate>
+@interface TilesViewController () <FastttCameraDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *mosaicTemplateImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet GridView *gridView;
 @property (weak, nonatomic) IBOutlet UISlider *gridSizeSlider;
 @property (strong, nonatomic) FastttCamera *camera;
 @property (weak, nonatomic) TileCell *cameraCell;
-@property (nonatomic) int tilesPerRow;
+@property (readonly, nonatomic) CGFloat maximumZoomScale;
+@property (nonatomic) CGFloat minimumZoomScale;
+@property (nonatomic) NSInteger tilesPerRow;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *zoomableView;
+@property (nonatomic) CGFloat cameraZoomScale;
 @end
 
 @implementation TilesViewController
@@ -31,6 +35,7 @@ int const TilesPerRow = 5;
     [super viewDidLoad];
 
     self.tilesPerRow = TilesPerRow;
+    self.minimumZoomScale = MinimumZoomScale;
     self.gridView.cellsAcross = self.tilesPerRow;
     [self.mosaicTemplateImageView setImage:self.mosaicTemplateImage];
     [self initGridSizeSlider];
@@ -58,6 +63,9 @@ int const TilesPerRow = 5;
 - (void)initCamera {
     self.camera = [FastttCamera new];
     self.camera.delegate = self;
+    self.camera.handlesZoom = NO;
+    [self.camera zoomToScale:self.minimumZoomScale];
+    self.camera.maxZoomFactor = self.maximumZoomScale;
     [self.camera willMoveToParentViewController:self];
     [self addChildViewController:self.camera];
     [self.camera didMoveToParentViewController:self];
@@ -65,15 +73,20 @@ int const TilesPerRow = 5;
 
 - (void)initScrollView {
     self.scrollView.delegate = self;
+    self.scrollView.minimumZoomScale = self.minimumZoomScale;
+//    UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scrollViewWasPinched:)];
+//    pinchGestureRecognizer.delegate = self;
+//    [self.scrollView addGestureRecognizer:pinchGestureRecognizer];
+    [self.scrollView.pinchGestureRecognizer addTarget:self action:@selector(scrollViewWasPinched:)];
 }
 
-- (void)setTilesPerRow:(int)tilesPerRow {
+- (void)setTilesPerRow:(NSInteger)tilesPerRow {
     _tilesPerRow = tilesPerRow;
     self.gridView.cellsAcross = tilesPerRow;
     self.cameraCell = nil;
     [self.collectionView reloadData];
 
-    CGFloat newMaximumZoomScale = (float)self.tilesPerRow / 2.0;
+    CGFloat newMaximumZoomScale = self.maximumZoomScale;
     if (self.scrollView.zoomScale > newMaximumZoomScale) {
         [self.scrollView setZoomScale:newMaximumZoomScale animated:YES];
     }
@@ -83,6 +96,10 @@ int const TilesPerRow = 5;
 - (void)setMosaicTemplateImage:(UIImage *)mosaicTemplateImage {
     _mosaicTemplateImage = mosaicTemplateImage;
     [self.mosaicTemplateImageView setImage:mosaicTemplateImage];
+}
+
+- (CGFloat)maximumZoomScale {
+    return (CGFloat)self.tilesPerRow / 2.0;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -146,4 +163,58 @@ int const TilesPerRow = 5;
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.zoomableView;
 }
+
+- (void)scrollViewWasPinched:(UIPinchGestureRecognizer *)sender {
+    switch (sender.state) {
+        case UIGestureRecognizerStateChanged: {
+            NSLog(@"Changed w/ sender.scale %f", sender.scale);
+            if (sender.scale > self.maximumZoomScale) {
+                self.cameraZoomScale = [self updateCameraZoomScaleFromPinchGestureRecognizerScale:sender.scale];
+            } else if (self.cameraZoomScale > 1.0) {
+
+            }
+//            if (self.scrollView.zoomScale == self.scrollView.maximumZoomScale) {
+//                NSLog(@"reached max zoom");
+//                [self.camera zoomToScale:(self.zoomScale * sender.scale)];
+//            }
+            break;
+        }
+
+        case UIGestureRecognizerStateEnded: {
+//            if (sender.scale > self.maximumZoomScale) {
+//                self.zoomScale = self.maximumZoomScale;
+//            } else if (sender.scale < self.minimumZoomScale) {
+//                self.zoomScale = self.minimumZoomScale;
+//            } else {
+//                self.zoomScale = sender.scale;
+//            }
+            break;
+        }
+
+        default:
+            break;
+    }
+}
+
+- (void)setCameraZoomScale:(CGFloat)cameraZoomScale {
+    _cameraZoomScale = cameraZoomScale;
+    [self.camera zoomToScale:cameraZoomScale];
+}
+
+- (CGFloat)updateCameraZoomScaleFromPinchGestureRecognizerScale:(CGFloat)scale {
+    return scale - self.maximumZoomScale + 1.0;
+}
+//
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+//    return YES;
+//}
+//
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+//    return YES;
+//}
+//
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(nonnull UIGestureRecognizer *)otherGestureRecognizer {
+//    NSLog(@"shouldRecognize? %@", self.cameraZoomScale > 1.0 ? @"YES" : @"NO");
+//    return self.cameraZoomScale > 1.0;
+//}
 @end

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GridView : UIView
-@property (nonatomic) int cellsAcross;
+@property (nonatomic) NSInteger cellsAcross;
 @end
