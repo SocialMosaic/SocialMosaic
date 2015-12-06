@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSArray *sampleImages;
 @property (strong, nonatomic) UIImage *selectedImage;
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
+@property (weak, nonatomic) IBOutlet UIImageView *selectedImageView;
 
 @end
 
@@ -37,8 +38,7 @@
     
 }
 - (IBAction)onTakePhoto:(id)sender {
-    if ([UIImagePickerController isSourceTypeAvailable:
-         UIImagePickerControllerSourceTypeCamera])
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
     {
         self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
         self.imagePicker.allowsEditing = NO;
@@ -47,8 +47,9 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> *)info {
-     [picker dismissViewControllerAnimated:YES completion:nil];
+    [picker dismissViewControllerAnimated:YES completion:nil];
     self.selectedImage = info[@"UIImagePickerControllerOriginalImage"];
+    self.selectedImageView.image = self.selectedImage;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -65,6 +66,7 @@
     ChooserImageCollectionViewCell *cell = (ChooserImageCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     cell.outlined = YES;
     self.selectedImage = cell.chooserImageView.image;
+    self.selectedImageView.image = self.selectedImage;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {

@@ -213,7 +213,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MBb-F1-gJb">
-                                <rect key="frame" x="8" y="72" width="584" height="482"/>
+                                <rect key="frame" x="8" y="72" width="584" height="372"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="25u-gz-tdF">
@@ -240,16 +240,26 @@
                                     <action selector="onTakePhoto:" destination="tIv-iZ-61N" eventType="touchUpInside" id="86P-LP-STi"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-Zy-lrq">
+                                <rect key="frame" x="258" y="470" width="84" height="84"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="Q1Z-W6-7gL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="t9o-E2-dwn" firstAttribute="top" secondItem="MBb-F1-gJb" secondAttribute="bottom" constant="8" id="9tJ-wG-UlH"/>
+                            <constraint firstItem="t9o-E2-dwn" firstAttribute="top" secondItem="MBb-F1-gJb" secondAttribute="bottom" constant="118" id="9tJ-wG-UlH"/>
                             <constraint firstItem="MBb-F1-gJb" firstAttribute="leading" secondItem="09N-kF-Jlh" secondAttribute="leading" constant="8" id="G5l-n4-v7X"/>
+                            <constraint firstItem="2KU-Zy-lrq" firstAttribute="top" secondItem="MBb-F1-gJb" secondAttribute="bottom" constant="26" id="KSd-zG-j1B"/>
+                            <constraint firstItem="2KU-Zy-lrq" firstAttribute="centerX" secondItem="t9o-E2-dwn" secondAttribute="centerX" id="P2N-fp-aSw"/>
                             <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="gtb-Vj-xxm" secondAttribute="bottom" constant="46" id="Q97-VJ-PWK"/>
                             <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="fA3-bS-Xd5" secondAttribute="bottom" constant="46" id="QHU-Jd-WgL"/>
                             <constraint firstItem="MBb-F1-gJb" firstAttribute="top" secondItem="lCg-dg-m2H" secondAttribute="bottom" constant="8" id="RrF-eQ-cJW"/>
                             <constraint firstAttribute="trailing" secondItem="MBb-F1-gJb" secondAttribute="trailing" constant="8" id="cmb-jd-ROU"/>
+                            <constraint firstItem="t9o-E2-dwn" firstAttribute="top" secondItem="2KU-Zy-lrq" secondAttribute="bottom" constant="8" id="eyf-SY-Aq2"/>
                             <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="t9o-E2-dwn" secondAttribute="bottom" constant="8" id="f1i-16-hO3"/>
                             <constraint firstItem="fA3-bS-Xd5" firstAttribute="leading" secondItem="09N-kF-Jlh" secondAttribute="leading" constant="20" id="sVt-M3-5Pm"/>
                             <constraint firstAttribute="trailing" secondItem="gtb-Vj-xxm" secondAttribute="trailing" constant="20" id="xhw-oX-vtR"/>
@@ -259,6 +269,7 @@
                     <navigationItem key="navigationItem" id="Uk7-ze-XKc"/>
                     <connections>
                         <outlet property="galleryCollectionView" destination="MBb-F1-gJb" id="yfp-nn-bld"/>
+                        <outlet property="selectedImageView" destination="2KU-Zy-lrq" id="5sA-hP-PY1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lb1-bW-8dU" userLabel="First Responder" sceneMemberID="firstResponder"/>
