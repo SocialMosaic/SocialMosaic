@@ -224,12 +224,20 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fA3-bS-Xd5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fA3-bS-Xd5">
                                 <rect key="frame" x="20" y="524" width="87" height="30"/>
                                 <animations/>
                                 <state key="normal" title="From Library"/>
                                 <connections>
                                     <action selector="onChooseFromLibrary:" destination="tIv-iZ-61N" eventType="touchUpInside" id="ZDx-QO-Jg6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtb-Vj-xxm">
+                                <rect key="frame" x="503" y="524" width="77" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="onTakePhoto:" destination="tIv-iZ-61N" eventType="touchUpInside" id="86P-LP-STi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -238,9 +246,13 @@
                         <constraints>
                             <constraint firstItem="t9o-E2-dwn" firstAttribute="top" secondItem="MBb-F1-gJb" secondAttribute="bottom" constant="8" id="9tJ-wG-UlH"/>
                             <constraint firstItem="MBb-F1-gJb" firstAttribute="leading" secondItem="09N-kF-Jlh" secondAttribute="leading" constant="8" id="G5l-n4-v7X"/>
+                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="gtb-Vj-xxm" secondAttribute="bottom" constant="46" id="Q97-VJ-PWK"/>
+                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="fA3-bS-Xd5" secondAttribute="bottom" constant="46" id="QHU-Jd-WgL"/>
                             <constraint firstItem="MBb-F1-gJb" firstAttribute="top" secondItem="lCg-dg-m2H" secondAttribute="bottom" constant="8" id="RrF-eQ-cJW"/>
                             <constraint firstAttribute="trailing" secondItem="MBb-F1-gJb" secondAttribute="trailing" constant="8" id="cmb-jd-ROU"/>
                             <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="t9o-E2-dwn" secondAttribute="bottom" constant="8" id="f1i-16-hO3"/>
+                            <constraint firstItem="fA3-bS-Xd5" firstAttribute="leading" secondItem="09N-kF-Jlh" secondAttribute="leading" constant="20" id="sVt-M3-5Pm"/>
+                            <constraint firstAttribute="trailing" secondItem="gtb-Vj-xxm" secondAttribute="trailing" constant="20" id="xhw-oX-vtR"/>
                             <constraint firstItem="t9o-E2-dwn" firstAttribute="centerX" secondItem="09N-kF-Jlh" secondAttribute="centerX" id="y7A-YN-qsw"/>
                         </constraints>
                     </view>

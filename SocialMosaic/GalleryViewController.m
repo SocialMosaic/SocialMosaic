@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *galleryCollectionView;
 @property (strong, nonatomic) NSArray *sampleImages;
 @property (strong, nonatomic) UIImage *selectedImage;
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
 
 @end
 
@@ -26,14 +27,23 @@
     self.galleryCollectionView.delegate = self;
     [self.galleryCollectionView registerNib:[UINib nibWithNibName:@"ChooserImageCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"chooserImage"];
     [self.galleryCollectionView selectItemAtIndexPath:[NSIndexPath indexPathWithIndex:0] animated:YES scrollPosition:UICollectionViewScrollPositionTop];
+    self.imagePicker = [[UIImagePickerController alloc] init];
+    self.imagePicker.delegate = self;
+    self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 }
 
 - (IBAction)onChooseFromLibrary:(id)sender {
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.delegate = self;
-    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    [self.navigationController presentViewController:imagePicker animated:YES completion:nil];
+    [self.navigationController presentViewController:self.imagePicker animated:YES completion:nil];
     
+}
+- (IBAction)onTakePhoto:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeCamera])
+    {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        self.imagePicker.allowsEditing = NO;
+        [self presentViewController:self.imagePicker animated:YES completion:nil];
+    }
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> *)info {
