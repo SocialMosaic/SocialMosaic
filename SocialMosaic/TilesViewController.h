@@ -6,8 +6,9 @@
 //  Copyright © 2015 SocialMosaic. All rights reserved.
 //
 
+#import "JPMultiScaleZoom.h"
 #import <UIKit/UIKit.h>
 
-@interface TilesViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
+@interface TilesViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, JPMultiScaleZoomDelegate>
 @property (strong, nonatomic) UIImage *mosaicTemplateImage;
 @end

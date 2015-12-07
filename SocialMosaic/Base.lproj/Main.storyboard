@@ -77,6 +77,9 @@
                                             <constraint firstItem="ePS-Ff-Gq7" firstAttribute="centerX" secondItem="XIy-fM-nn0" secondAttribute="centerX" id="p10-Dr-MDP"/>
                                             <constraint firstItem="AHE-TT-9qL" firstAttribute="width" secondItem="XIy-fM-nn0" secondAttribute="width" id="yYi-GV-hLJ"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="LBY-SE-IQZ" appends="YES" id="3jv-Yx-yXq"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -137,6 +140,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="LBY-SE-IQZ">
+                    <connections>
+                        <action selector="zoomableViewWasPinched:" destination="BYZ-38-t0r" id="Mog-iF-5Q3"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1314" y="327"/>
         </scene>

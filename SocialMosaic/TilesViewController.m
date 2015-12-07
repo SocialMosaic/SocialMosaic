@@ -8,6 +8,7 @@
 
 #import <FastttCamera.h>
 #import "GridView.h"
+#import "JPMultiScaleZoom.h"
 #import "TileCell.h"
 #import "TilesViewController.h"
 
@@ -20,6 +21,8 @@ int const TilesPerRow = 5;
 @property (weak, nonatomic) IBOutlet UISlider *gridSizeSlider;
 @property (strong, nonatomic) FastttCamera *camera;
 @property (weak, nonatomic) TileCell *cameraCell;
+@property (readonly, nonatomic) CGFloat maximumZoomableViewScale;
+@property (strong, nonatomic) JPMultiScaleZoom *multiScaleZoom;
 @property (nonatomic) int tilesPerRow;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *zoomableView;
@@ -37,6 +40,7 @@ int const TilesPerRow = 5;
     [self initCollectionView];
     [self initCamera];
     [self initScrollView];
+    [self initMultiScaleZoom];
 }
 
 - (void)initGridSizeSlider {
@@ -77,12 +81,16 @@ int const TilesPerRow = 5;
     if (self.scrollView.zoomScale > newMaximumZoomScale) {
         [self.scrollView setZoomScale:newMaximumZoomScale animated:YES];
     }
-    self.scrollView.maximumZoomScale = newMaximumZoomScale;
+//    self.scrollView.maximumZoomScale = newMaximumZoomScale;
 }
 
 - (void)setMosaicTemplateImage:(UIImage *)mosaicTemplateImage {
     _mosaicTemplateImage = mosaicTemplateImage;
     [self.mosaicTemplateImageView setImage:mosaicTemplateImage];
+}
+
+- (CGFloat)maximumZoomableViewScale {
+    return (CGFloat)self.tilesPerRow / 2.0;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -145,5 +153,32 @@ int const TilesPerRow = 5;
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.zoomableView;
+}
+
+- (void)initMultiScaleZoom {
+    self.multiScaleZoom = [[JPMultiScaleZoom alloc] init];
+    [self.multiScaleZoom addThresholdWithObject:self.zoomableView scaleStart:1.0 scaleEnd:self.maximumZoomableViewScale];
+    [self.multiScaleZoom addThresholdWithObject:self.camera scaleStart:1.0 scaleEnd:4.0];
+    self.multiScaleZoom.delegate = self;
+}
+
+- (void)multiScaleZoom:(JPMultiScaleZoom *)multiScaleZoom didUpdateZoomTo:(CGFloat)zoomLevel forObject:(NSObject *)object {
+    if (object == self.zoomableView) {
+        self.zoomableView.transform = CGAffineTransformMakeScale(zoomLevel, zoomLevel);
+    } else if (object == self.camera) {
+        [self.camera zoomToScale:zoomLevel];
+    }
+}
+
+- (IBAction)zoomableViewWasPinched:(UIPinchGestureRecognizer *)sender {
+    switch (sender.state) {
+        case UIGestureRecognizerStateChanged:
+            NSLog(@"%f", sender.scale);
+            self.multiScaleZoom.scale = sender.scale;
+            break;
+
+        default:
+            break;
+    }
 }
 @end
