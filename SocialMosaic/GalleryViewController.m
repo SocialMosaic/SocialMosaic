@@ -33,11 +33,10 @@
 
 - (IBAction)onChooseFromLibrary:(id)sender {
     [self.navigationController presentViewController:self.imagePicker animated:YES completion:nil];
-    
 }
+
 - (IBAction)onTakePhoto:(id)sender {
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-    {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
         self.imagePicker.allowsEditing = NO;
         [self presentViewController:self.imagePicker animated:YES completion:nil];
