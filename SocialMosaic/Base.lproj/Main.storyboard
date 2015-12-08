@@ -16,11 +16,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEw-KA-4wB">
-                                <rect key="frame" x="0.0" y="-32" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIy-fM-nn0" userLabel="Zoomable View">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -92,7 +92,7 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yts-7N-m6F">
-                                <rect key="frame" x="546" y="506" width="34" height="30"/>
+                                <rect key="frame" x="546" y="570" width="34" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -100,7 +100,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-Bf-fXv">
-                                <rect key="frame" x="20" y="506" width="35" height="30"/>
+                                <rect key="frame" x="20" y="570" width="35" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Snap"/>
                                 <connections>
@@ -108,7 +108,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="MaI-Nq-h3J">
-                                <rect key="frame" x="69" y="506" width="463" height="31"/>
+                                <rect key="frame" x="69" y="570" width="463" height="31"/>
                                 <animations/>
                             </slider>
                         </subviews>
@@ -224,7 +224,7 @@
                                         </view>
                                         <animations/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="TilesViewController" id="7mk-HT-9a3"/>
+                                            <segue destination="BYZ-38-t0r" kind="custom" identifier="TilesViewController" customClass="GalleryToTilesSegue" id="7mk-HT-9a3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
