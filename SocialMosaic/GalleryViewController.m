@@ -28,19 +28,6 @@
     [self.galleryCollectionView selectItemAtIndexPath:[NSIndexPath indexPathWithIndex:0] animated:YES scrollPosition:UICollectionViewScrollPositionTop];
     self.imagePicker = [[UIImagePickerController alloc] init];
     self.imagePicker.delegate = self;
-    self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-}
-
-- (IBAction)onChooseFromLibrary:(id)sender {
-    [self.navigationController presentViewController:self.imagePicker animated:YES completion:nil];
-}
-
-- (IBAction)onTakePhoto:(id)sender {
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        self.imagePicker.allowsEditing = NO;
-        [self presentViewController:self.imagePicker animated:YES completion:nil];
-    }
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> *)info {
@@ -71,6 +58,34 @@
     } else if ([sender isKindOfClass:[NSDictionary class]]) { // TODO: Figure out a better way to determine this came from the image picker.
         UIImage *image = ((NSDictionary *)sender)[@"UIImagePickerControllerOriginalImage"];
         vc.mosaicTemplateImage = image;
+    }
+}
+
+- (IBAction)onChoosePhoto:(id)sender {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"Take a photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self takePhoto];
+    }];
+    UIAlertAction *chooseFromLibraryAction = [UIAlertAction actionWithTitle:@"Choose from library" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self chooseFromLibrary];
+    }];
+    [alert addAction:takePhotoAction];
+    [alert addAction:chooseFromLibraryAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)chooseFromLibrary {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:self.imagePicker animated:YES completion:nil];
+    }
+}
+
+- (void)takePhoto {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        self.imagePicker.allowsEditing = NO;
+        [self presentViewController:self.imagePicker animated:YES completion:nil];
     }
 }
 @end

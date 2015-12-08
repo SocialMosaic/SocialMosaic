@@ -155,7 +155,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0n-nu-95v">
                                 <rect key="frame" x="239" y="562" width="121" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Start New Project"/>
+                                <state key="normal" title="Start New Project">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="tIv-iZ-61N" kind="show" identifier="" id="Fvr-cx-7Jb"/>
                                 </connections>
@@ -164,19 +166,19 @@
                                 <rect key="frame" x="252" y="72" width="95" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SocialMosaic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMh-T8-qP2">
                                 <rect key="frame" x="221" y="93" width="158" height="35"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98823529480000005" green="0.48235294220000002" blue="0.30980393290000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="9x5-RQ-G5m" firstAttribute="top" secondItem="BAT-AC-QZY" secondAttribute="bottom" constant="8" id="CyL-3l-pzW"/>
                             <constraint firstItem="bWj-hz-5BP" firstAttribute="top" secondItem="o0n-nu-95v" secondAttribute="bottom" constant="8" id="GSa-nZ-Zwe"/>
@@ -205,9 +207,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MBb-F1-gJb">
-                                <rect key="frame" x="8" y="72" width="584" height="478"/>
+                                <rect key="frame" x="8" y="72" width="584" height="520"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="25u-gz-tdF">
                                     <size key="itemSize" width="134" height="135"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -231,37 +233,23 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fA3-bS-Xd5">
-                                <rect key="frame" x="20" y="570" width="87" height="30"/>
-                                <animations/>
-                                <state key="normal" title="From Library"/>
-                                <connections>
-                                    <action selector="onChooseFromLibrary:" destination="tIv-iZ-61N" eventType="touchUpInside" id="ZDx-QO-Jg6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtb-Vj-xxm">
-                                <rect key="frame" x="503" y="570" width="77" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Take Photo"/>
-                                <connections>
-                                    <action selector="onTakePhoto:" destination="tIv-iZ-61N" eventType="touchUpInside" id="86P-LP-STi"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gtb-Vj-xxm" firstAttribute="top" secondItem="MBb-F1-gJb" secondAttribute="bottom" constant="20" id="CzZ-mE-9P6"/>
                             <constraint firstItem="MBb-F1-gJb" firstAttribute="leading" secondItem="09N-kF-Jlh" secondAttribute="leading" constant="8" id="G5l-n4-v7X"/>
-                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="gtb-Vj-xxm" secondAttribute="bottom" id="Q97-VJ-PWK"/>
-                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="fA3-bS-Xd5" secondAttribute="bottom" id="QHU-Jd-WgL"/>
+                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="MBb-F1-gJb" secondAttribute="bottom" constant="8" id="Kho-m4-Y3r"/>
                             <constraint firstItem="MBb-F1-gJb" firstAttribute="top" secondItem="lCg-dg-m2H" secondAttribute="bottom" constant="8" id="RrF-eQ-cJW"/>
                             <constraint firstAttribute="trailing" secondItem="MBb-F1-gJb" secondAttribute="trailing" constant="8" id="cmb-jd-ROU"/>
-                            <constraint firstItem="fA3-bS-Xd5" firstAttribute="leading" secondItem="09N-kF-Jlh" secondAttribute="leadingMargin" id="sVt-M3-5Pm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gtb-Vj-xxm" secondAttribute="trailing" id="xhw-oX-vtR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Uk7-ze-XKc"/>
+                    <navigationItem key="navigationItem" id="Uk7-ze-XKc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="ttu-Cg-076">
+                            <connections>
+                                <action selector="onChoosePhoto:" destination="tIv-iZ-61N" id="opp-F1-A9h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="galleryCollectionView" destination="MBb-F1-gJb" id="yfp-nn-bld"/>
                     </connections>
