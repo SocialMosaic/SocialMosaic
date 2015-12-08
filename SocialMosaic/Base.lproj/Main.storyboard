@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Tiles View Controller-->
+        <!--Mosaic-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="TilesViewController" sceneMemberID="viewController">
+                <viewController title="Mosaic" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="TilesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -192,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="-33" y="327"/>
         </scene>
-        <!--Gallery View Controller-->
+        <!--Choose your mosaic-->
         <scene sceneID="iLl-Ay-Yj3">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tIv-iZ-61N" customClass="GalleryViewController" sceneMemberID="viewController">
+                <viewController title="Choose your mosaic" automaticallyAdjustsScrollViewInsets="NO" id="tIv-iZ-61N" customClass="GalleryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lCg-dg-m2H"/>
                         <viewControllerLayoutGuide type="bottom" id="M7Y-Z5-mZ8"/>
@@ -205,7 +205,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MBb-F1-gJb">
-                                <rect key="frame" x="8" y="72" width="584" height="458"/>
+                                <rect key="frame" x="8" y="72" width="584" height="478"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="25u-gz-tdF">
@@ -232,7 +232,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fA3-bS-Xd5">
-                                <rect key="frame" x="20" y="550" width="87" height="30"/>
+                                <rect key="frame" x="20" y="570" width="87" height="30"/>
                                 <animations/>
                                 <state key="normal" title="From Library"/>
                                 <connections>
@@ -240,7 +240,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtb-Vj-xxm">
-                                <rect key="frame" x="503" y="550" width="77" height="30"/>
+                                <rect key="frame" x="503" y="570" width="77" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
@@ -253,12 +253,12 @@
                         <constraints>
                             <constraint firstItem="gtb-Vj-xxm" firstAttribute="top" secondItem="MBb-F1-gJb" secondAttribute="bottom" constant="20" id="CzZ-mE-9P6"/>
                             <constraint firstItem="MBb-F1-gJb" firstAttribute="leading" secondItem="09N-kF-Jlh" secondAttribute="leading" constant="8" id="G5l-n4-v7X"/>
-                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="gtb-Vj-xxm" secondAttribute="bottom" constant="20" id="Q97-VJ-PWK"/>
-                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="fA3-bS-Xd5" secondAttribute="bottom" constant="20" id="QHU-Jd-WgL"/>
+                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="gtb-Vj-xxm" secondAttribute="bottom" id="Q97-VJ-PWK"/>
+                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="fA3-bS-Xd5" secondAttribute="bottom" id="QHU-Jd-WgL"/>
                             <constraint firstItem="MBb-F1-gJb" firstAttribute="top" secondItem="lCg-dg-m2H" secondAttribute="bottom" constant="8" id="RrF-eQ-cJW"/>
                             <constraint firstAttribute="trailing" secondItem="MBb-F1-gJb" secondAttribute="trailing" constant="8" id="cmb-jd-ROU"/>
-                            <constraint firstItem="fA3-bS-Xd5" firstAttribute="leading" secondItem="09N-kF-Jlh" secondAttribute="leading" constant="20" id="sVt-M3-5Pm"/>
-                            <constraint firstAttribute="trailing" secondItem="gtb-Vj-xxm" secondAttribute="trailing" constant="20" id="xhw-oX-vtR"/>
+                            <constraint firstItem="fA3-bS-Xd5" firstAttribute="leading" secondItem="09N-kF-Jlh" secondAttribute="leadingMargin" id="sVt-M3-5Pm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gtb-Vj-xxm" secondAttribute="trailing" id="xhw-oX-vtR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uk7-ze-XKc"/>
@@ -273,6 +273,7 @@
         <!--Navigation Controller-->
         <scene sceneID="V1i-d1-Jqr">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lva-C4-MIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F4v-DX-Wfi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Wh-Uc-sSL">
@@ -285,7 +286,6 @@
                         <segue destination="olQ-fl-WrZ" kind="relationship" relationship="rootViewController" id="BVZ-HG-lJ1"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lva-C4-MIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-33" y="-391"/>
         </scene>
