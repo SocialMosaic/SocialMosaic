@@ -13,9 +13,7 @@
 @interface GalleryViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *galleryCollectionView;
 @property (strong, nonatomic) NSArray *sampleImages;
-@property (strong, nonatomic) UIImage *selectedImage;
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
-@property (weak, nonatomic) IBOutlet UIImageView *selectedImageView;
 
 @end
 
@@ -48,8 +46,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
-    self.selectedImage = info[@"UIImagePickerControllerOriginalImage"];
-    self.selectedImageView.image = self.selectedImage;
+    [self performSegueWithIdentifier:@"TilesViewController" sender:info];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -64,35 +61,17 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     ChooserImageCollectionViewCell *cell = (ChooserImageCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    cell.outlined = YES;
-    self.selectedImage = cell.chooserImageView.image;
-    self.selectedImageView.image = self.selectedImage;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    ChooserImageCollectionViewCell *cell = (ChooserImageCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    cell.outlined = NO;
+    [self performSegueWithIdentifier:@"TilesViewController" sender:cell];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     TilesViewController *vc = (TilesViewController *)[segue destinationViewController];
-    NSLog(@"PREPARING FOR SEGUE");
-    [vc setMosaicTemplateImage:self.selectedImage];
+    if ([sender isKindOfClass:[ChooserImageCollectionViewCell class]]) {
+        UIImage *image = ((ChooserImageCollectionViewCell *)sender).chooserImageView.image;
+        vc.mosaicTemplateImage = image;
+    } else if ([sender isKindOfClass:[NSDictionary class]]) { // TODO: Figure out a better way to determine this came from the image picker.
+        UIImage *image = ((NSDictionary *)sender)[@"UIImagePickerControllerOriginalImage"];
+        vc.mosaicTemplateImage = image;
+    }
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

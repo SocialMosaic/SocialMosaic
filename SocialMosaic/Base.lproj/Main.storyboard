@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="F4v-DX-Wfi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="F4v-DX-Wfi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -157,7 +157,7 @@
                                 <animations/>
                                 <state key="normal" title="Start New Project"/>
                                 <connections>
-                                    <segue destination="tIv-iZ-61N" kind="show" id="Fvr-cx-7Jb"/>
+                                    <segue destination="tIv-iZ-61N" kind="show" identifier="" id="Fvr-cx-7Jb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9x5-RQ-G5m">
@@ -195,7 +195,7 @@
         <!--Gallery View Controller-->
         <scene sceneID="iLl-Ay-Yj3">
             <objects>
-                <viewController id="tIv-iZ-61N" customClass="GalleryViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tIv-iZ-61N" customClass="GalleryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lCg-dg-m2H"/>
                         <viewControllerLayoutGuide type="bottom" id="M7Y-Z5-mZ8"/>
@@ -204,16 +204,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9o-E2-dwn">
-                                <rect key="frame" x="274" y="562" width="53" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Choose"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="gLS-nT-ckM"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MBb-F1-gJb">
-                                <rect key="frame" x="8" y="72" width="584" height="372"/>
+                                <rect key="frame" x="8" y="72" width="584" height="458"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="25u-gz-tdF">
@@ -222,10 +214,25 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chooserImage" id="08y-eP-Ar9">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="134" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="TilesViewController" id="7mk-HT-9a3"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fA3-bS-Xd5">
-                                <rect key="frame" x="20" y="524" width="87" height="30"/>
+                                <rect key="frame" x="20" y="550" width="87" height="30"/>
                                 <animations/>
                                 <state key="normal" title="From Library"/>
                                 <connections>
@@ -233,43 +240,30 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtb-Vj-xxm">
-                                <rect key="frame" x="503" y="524" width="77" height="30"/>
+                                <rect key="frame" x="503" y="550" width="77" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="onTakePhoto:" destination="tIv-iZ-61N" eventType="touchUpInside" id="86P-LP-STi"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-Zy-lrq">
-                                <rect key="frame" x="258" y="470" width="84" height="84"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="Q1Z-W6-7gL"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="t9o-E2-dwn" firstAttribute="top" secondItem="MBb-F1-gJb" secondAttribute="bottom" constant="118" id="9tJ-wG-UlH"/>
+                            <constraint firstItem="gtb-Vj-xxm" firstAttribute="top" secondItem="MBb-F1-gJb" secondAttribute="bottom" constant="20" id="CzZ-mE-9P6"/>
                             <constraint firstItem="MBb-F1-gJb" firstAttribute="leading" secondItem="09N-kF-Jlh" secondAttribute="leading" constant="8" id="G5l-n4-v7X"/>
-                            <constraint firstItem="2KU-Zy-lrq" firstAttribute="top" secondItem="MBb-F1-gJb" secondAttribute="bottom" constant="26" id="KSd-zG-j1B"/>
-                            <constraint firstItem="2KU-Zy-lrq" firstAttribute="centerX" secondItem="t9o-E2-dwn" secondAttribute="centerX" id="P2N-fp-aSw"/>
-                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="gtb-Vj-xxm" secondAttribute="bottom" constant="46" id="Q97-VJ-PWK"/>
-                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="fA3-bS-Xd5" secondAttribute="bottom" constant="46" id="QHU-Jd-WgL"/>
+                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="gtb-Vj-xxm" secondAttribute="bottom" constant="20" id="Q97-VJ-PWK"/>
+                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="fA3-bS-Xd5" secondAttribute="bottom" constant="20" id="QHU-Jd-WgL"/>
                             <constraint firstItem="MBb-F1-gJb" firstAttribute="top" secondItem="lCg-dg-m2H" secondAttribute="bottom" constant="8" id="RrF-eQ-cJW"/>
                             <constraint firstAttribute="trailing" secondItem="MBb-F1-gJb" secondAttribute="trailing" constant="8" id="cmb-jd-ROU"/>
-                            <constraint firstItem="t9o-E2-dwn" firstAttribute="top" secondItem="2KU-Zy-lrq" secondAttribute="bottom" constant="8" id="eyf-SY-Aq2"/>
-                            <constraint firstItem="M7Y-Z5-mZ8" firstAttribute="top" secondItem="t9o-E2-dwn" secondAttribute="bottom" constant="8" id="f1i-16-hO3"/>
                             <constraint firstItem="fA3-bS-Xd5" firstAttribute="leading" secondItem="09N-kF-Jlh" secondAttribute="leading" constant="20" id="sVt-M3-5Pm"/>
                             <constraint firstAttribute="trailing" secondItem="gtb-Vj-xxm" secondAttribute="trailing" constant="20" id="xhw-oX-vtR"/>
-                            <constraint firstItem="t9o-E2-dwn" firstAttribute="centerX" secondItem="09N-kF-Jlh" secondAttribute="centerX" id="y7A-YN-qsw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uk7-ze-XKc"/>
                     <connections>
                         <outlet property="galleryCollectionView" destination="MBb-F1-gJb" id="yfp-nn-bld"/>
-                        <outlet property="selectedImageView" destination="2KU-Zy-lrq" id="5sA-hP-PY1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lb1-bW-8dU" userLabel="First Responder" sceneMemberID="firstResponder"/>
