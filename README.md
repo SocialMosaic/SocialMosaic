@@ -2,6 +2,8 @@
 
 Social Mosaic is an app that allows users to upload photos to fill in "tiles" of a larger photo to create a mosaic that reproduces the original photo... socially.
 
+![Our App](http://i.imgur.com/xSpV9Hk.gif)
+
 ## MVP
 - [X] Show a collection of images
 - [X] User can select an image from collection
@@ -14,8 +16,8 @@ Social Mosaic is an app that allows users to upload photos to fill in "tiles" of
 - [ ] Show a welcome screen with option to start a new project
 - [ ] Be able to go back to welcome screen and start a second project
 - [ ] Show a list of current projects on the welcome screen
-- [ ] Log in with facebook from welcome screen
-- [ ] If logged in, show logged in user instead of facebook icon
+- [X] Log in with facebook from welcome screen
+- [X] If logged in, show logged in user instead of facebook icon
 - [ ] Save user to parse
 - [ ] Save user's progress to parse
 
@@ -28,11 +30,11 @@ Social Mosaic is an app that allows users to upload photos to fill in "tiles" of
 - [ ] When adding a project with friends, friends automatically see the project when they log in
 
 ## Polish Features
-- [ ] Start a new mosaic from the camera
+- [X] Start a new mosaic from the camera
 - [ ] Load new possible images from Parse
-- [ ] Pan and zoom final image
+- [X] Pan and zoom final image
 - [ ] Zooming in on an image loads better quality images
-- [ ] Pan and zoom in-progress image
+- [X] Pan and zoom in-progress image
 - [ ] Flip animation on tile to show camera
 - [ ] Add filter to grade difficulty of templates from easy to hard
 
