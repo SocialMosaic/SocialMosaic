@@ -29,7 +29,8 @@ int const TilesPerRow = 5;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.tilesPerRow = TilesPerRow;
     self.gridView.cellsAcross = self.tilesPerRow;
     [self.mosaicTemplateImageView setImage:self.mosaicTemplateImage];

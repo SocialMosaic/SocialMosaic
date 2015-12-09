@@ -21,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.sampleImages = @[@"sample", @"sample2", @"sample3", @"sample4", @"sample5", @"sample6", @"sample7", @"sample8", @"sample9", @"sample10", @"sample11", @"sample12", @"sample13", @"sample14", @"sample15", @"sample16", @"sample17", @"sample18", @"sample19"];
     self.galleryCollectionView.dataSource = self;
     self.galleryCollectionView.delegate = self;

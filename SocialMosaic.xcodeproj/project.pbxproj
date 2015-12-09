@@ -189,7 +189,7 @@
 				TargetAttributes = {
 					ECFEE94F1BFEA7EB004E04AF = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 3QCM2H4ZRK;
+						DevelopmentTeam = MM8AM2G2PM;
 					};
 				};
 			};
@@ -404,7 +404,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SocialMosaic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.getsocialmosaic.SocialMosaic1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.getsocialmosaic.SocialMosaic4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -419,7 +419,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SocialMosaic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.getsocialmosaic.SocialMosaic1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.getsocialmosaic.SocialMosaic4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
