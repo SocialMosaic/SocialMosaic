@@ -124,7 +124,7 @@ int const TilesPerRow = 5;
 
 - (void)saveMosaic {
     UIGraphicsBeginImageContext(self.collectionView.frame.size);
-    [self.collectionView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    [self.zoomableView.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *mosaic = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     UIImageWriteToSavedPhotosAlbum(mosaic, nil, nil, nil);

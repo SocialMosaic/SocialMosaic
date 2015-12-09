@@ -137,7 +137,7 @@
                         <outlet property="gridView" destination="ePS-Ff-Gq7" id="3ju-TX-acB"/>
                         <outlet property="mosaicTemplateImageView" destination="eVJ-Sc-u1c" id="USj-bc-zLE"/>
                         <outlet property="scrollView" destination="AEw-KA-4wB" id="y7w-wN-cR2"/>
-                        <outlet property="zoomableView" destination="XIy-fM-nn0" id="dKA-V2-hql"/>
+                        <outlet property="zoomableView" destination="XIy-fM-nn0" id="skz-2r-8xg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
