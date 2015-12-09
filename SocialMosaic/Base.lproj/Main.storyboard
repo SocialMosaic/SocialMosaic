@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="F4v-DX-Wfi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="F4v-DX-Wfi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -163,19 +163,24 @@
                                     <segue destination="tIv-iZ-61N" kind="show" identifier="" id="Fvr-cx-7Jb"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SSz-hD-eC2">
-                                <rect key="frame" x="220" y="188" width="160" height="160"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SSz-hD-eC2">
+                                <rect key="frame" x="220" y="108" width="160" height="160"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="1cL-UR-TbM"/>
                                     <constraint firstAttribute="height" constant="160" id="jzO-wl-Rpj"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SSz-hD-eC2" firstAttribute="centerY" secondItem="CRo-PW-rMe" secondAttribute="centerY" id="5i2-4h-OUk"/>
+                            <constraint firstItem="SSz-hD-eC2" firstAttribute="centerY" secondItem="CRo-PW-rMe" secondAttribute="centerY" constant="-80" id="EKi-PI-h1v"/>
                             <constraint firstItem="bWj-hz-5BP" firstAttribute="top" secondItem="o0n-nu-95v" secondAttribute="bottom" constant="8" id="GSa-nZ-Zwe"/>
                             <constraint firstItem="o0n-nu-95v" firstAttribute="centerX" secondItem="CRo-PW-rMe" secondAttribute="centerX" id="eLF-6c-wmO"/>
                             <constraint firstItem="SSz-hD-eC2" firstAttribute="centerX" secondItem="CRo-PW-rMe" secondAttribute="centerX" id="hsP-M1-u3c"/>
@@ -207,17 +212,17 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="25u-gz-tdF">
-                                    <size key="itemSize" width="134" height="135"/>
+                                    <size key="itemSize" width="110" height="110"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chooserImage" id="08y-eP-Ar9">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="135"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="134" height="135"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

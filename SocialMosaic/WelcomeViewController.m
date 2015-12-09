@@ -40,8 +40,10 @@
             NSLog(@"Uh oh. The user cancelled the Facebook login.");
         } else if (user.isNew) {
             NSLog(@"User signed up and logged in through Facebook!");
+            [self loadProfileData];
         } else {
             NSLog(@"User logged in through Facebook!");
+            [self loadProfileData];
         }
     }];
 }
