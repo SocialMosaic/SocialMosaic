@@ -118,8 +118,7 @@ int const TilesPerRow = 5;
         [self.camera takePicture];
     }
 }
-
-- (IBAction)onSaveButton:(id)sender {
+- (IBAction)onSaveButtonTap:(id)sender {
     [self saveMosaic];
 }
 

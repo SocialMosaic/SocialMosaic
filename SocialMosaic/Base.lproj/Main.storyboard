@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Mosaic-->
@@ -16,10 +15,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEw-KA-4wB">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEw-KA-4wB">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIy-fM-nn0" userLabel="Zoomable View">
@@ -91,43 +90,47 @@
                                     <constraint firstItem="XIy-fM-nn0" firstAttribute="leading" secondItem="AEw-KA-4wB" secondAttribute="leading" id="pha-xG-cTB"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yts-7N-m6F">
-                                <rect key="frame" x="546" y="506" width="34" height="30"/>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="MaI-Nq-h3J">
+                                <rect key="frame" x="149" y="706" width="304" height="31"/>
                                 <animations/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="onSaveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0hd-Ag-ONz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-Bf-fXv">
-                                <rect key="frame" x="20" y="506" width="35" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8Su-5K-tgt"/>
+                                </constraints>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-Bf-fXv">
+                                <rect key="frame" x="268" y="617" width="64" height="64"/>
                                 <animations/>
-                                <state key="normal" title="Snap"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="SlG-0I-jTS"/>
+                                    <constraint firstAttribute="height" constant="64" id="gED-Nj-dgU"/>
+                                </constraints>
+                                <state key="normal" title="Snap" image="camera"/>
                                 <connections>
                                     <action selector="onShutterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6tH-xI-gFg"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="MaI-Nq-h3J">
-                                <rect key="frame" x="69" y="506" width="463" height="31"/>
-                                <animations/>
-                            </slider>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AEw-KA-4wB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="5oG-wa-pO2"/>
-                            <constraint firstItem="DTB-Bf-fXv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BDY-6B-Uqi"/>
-                            <constraint firstItem="yts-7N-m6F" firstAttribute="leading" secondItem="MaI-Nq-h3J" secondAttribute="trailing" constant="16" id="Nja-pn-vFT"/>
+                            <constraint firstItem="AEw-KA-4wB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="ENs-cb-0uw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MaI-Nq-h3J" secondAttribute="bottom" id="IyC-YN-91K"/>
+                            <constraint firstItem="MaI-Nq-h3J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KJz-A5-UR8"/>
                             <constraint firstAttribute="trailing" secondItem="AEw-KA-4wB" secondAttribute="trailing" id="TFY-mp-4H6"/>
                             <constraint firstItem="AEw-KA-4wB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wlp-Ci-iVc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yts-7N-m6F" secondAttribute="trailing" id="WyA-2c-maF"/>
-                            <constraint firstItem="MaI-Nq-h3J" firstAttribute="leading" secondItem="DTB-Bf-fXv" secondAttribute="trailing" constant="16" id="YdS-P9-B0n"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DTB-Bf-fXv" secondAttribute="bottom" id="fz9-CT-b3p"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MaI-Nq-h3J" secondAttribute="bottom" id="pJO-Kl-Y8p"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yts-7N-m6F" secondAttribute="bottom" id="qbf-s8-bb1"/>
+                            <constraint firstItem="DTB-Bf-fXv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z4u-cs-ild"/>
+                            <constraint firstItem="MaI-Nq-h3J" firstAttribute="top" secondItem="DTB-Bf-fXv" secondAttribute="bottom" constant="25" id="lQ1-Rv-fHz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Mosaic" id="2sv-pD-Zwm"/>
+                    <navigationItem key="navigationItem" title="Mosaic" id="2sv-pD-Zwm">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="4YB-bu-fd8">
+                            <connections>
+                                <action selector="onSaveButtonTap:" destination="BYZ-38-t0r" id="dKC-fD-tbG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="800"/>
                     <connections>
                         <outlet property="collectionView" destination="AHE-TT-9qL" id="OXd-um-rK9"/>
                         <outlet property="gridSizeSlider" destination="MaI-Nq-h3J" id="Afk-iv-ZKL"/>
@@ -285,6 +288,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="398" height="398"/>
         <image name="sample" width="958" height="628"/>
     </resources>
 </document>
