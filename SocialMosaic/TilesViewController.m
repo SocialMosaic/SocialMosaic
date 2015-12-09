@@ -128,6 +128,13 @@ int const TilesPerRow = 5;
     UIImage *mosaic = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     UIImageWriteToSavedPhotosAlbum(mosaic, nil, nil, nil);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Image Saved"
+                                                    message:@"Your mosaic was successfully saved to the Camera Roll"
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+
 }
 
 - (void)cameraController:(id<FastttCameraInterface>)cameraController didFinishCapturingImage:(FastttCapturedImage *)capturedImage {
