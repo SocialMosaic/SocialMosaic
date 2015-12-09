@@ -2,7 +2,8 @@
 
 Social Mosaic is an app that allows users to upload photos to fill in "tiles" of a larger photo to create a mosaic that reproduces the original photo... socially.
 
-![Our App](http://i.imgur.com/xSpV9Hk.gif)
+![See a video of our app](http://i.imgur.com/xSpV9Hk.gif)
+[See a video of our app](http://i.imgur.com/xSpV9Hk.gif)
 
 ## MVP
 - [X] Show a collection of images
