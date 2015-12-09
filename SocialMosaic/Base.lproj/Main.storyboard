@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEw-KA-4wB">
-                                <rect key="frame" x="0.0" y="-32" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIy-fM-nn0" userLabel="Zoomable View">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -115,7 +115,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AEw-KA-4wB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6cD-8n-ha9"/>
+                            <constraint firstItem="AEw-KA-4wB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="5oG-wa-pO2"/>
                             <constraint firstItem="DTB-Bf-fXv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BDY-6B-Uqi"/>
                             <constraint firstItem="yts-7N-m6F" firstAttribute="leading" secondItem="MaI-Nq-h3J" secondAttribute="trailing" constant="16" id="Nja-pn-vFT"/>
                             <constraint firstAttribute="trailing" secondItem="AEw-KA-4wB" secondAttribute="trailing" id="TFY-mp-4H6"/>
