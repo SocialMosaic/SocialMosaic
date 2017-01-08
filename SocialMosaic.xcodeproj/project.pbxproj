@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A1FF0B91C00382A00E9E98F /* TileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1FF0B71C00382A00E9E98F /* TileCell.xib */; };
 		3A1FF0BC1C003AEF00E9E98F /* TileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1FF0BB1C003AEF00E9E98F /* TileCell.m */; };
+		3A5320A91C16A7EA00144B07 /* GalleryToTilesSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5320A81C16A7EA00144B07 /* GalleryToTilesSegue.m */; };
 		C40278981C082EC2006F4938 /* Secrets.h.example in Resources */ = {isa = PBXBuildFile; fileRef = C40278971C082EC2006F4938 /* Secrets.h.example */; };
 		C402789B1C0839E7006F4938 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C402789A1C0839E7006F4938 /* WelcomeViewController.m */; };
 		C4E718071C06762600240801 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E718061C06762600240801 /* GalleryViewController.m */; };
@@ -29,6 +30,8 @@
 		3A1FF0B71C00382A00E9E98F /* TileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TileCell.xib; sourceTree = "<group>"; };
 		3A1FF0BA1C003AEF00E9E98F /* TileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCell.h; sourceTree = "<group>"; };
 		3A1FF0BB1C003AEF00E9E98F /* TileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileCell.m; sourceTree = "<group>"; };
+		3A5320A71C16A7EA00144B07 /* GalleryToTilesSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryToTilesSegue.h; sourceTree = "<group>"; };
+		3A5320A81C16A7EA00144B07 /* GalleryToTilesSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryToTilesSegue.m; sourceTree = "<group>"; };
 		A3FA0419CCF5C74A0517EEAD /* Pods-SocialMosaic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMosaic.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMosaic/Pods-SocialMosaic.release.xcconfig"; sourceTree = "<group>"; };
 		C40278961C082EC2006F4938 /* Secrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
 		C40278971C082EC2006F4938 /* Secrets.h.example */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Secrets.h.example; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				ECFEE9611BFEA7EB004E04AF /* LaunchScreen.storyboard */,
 				ECFEE9641BFEA7EB004E04AF /* Info.plist */,
 				ECFEE9531BFEA7EB004E04AF /* Supporting Files */,
+				3A5320A71C16A7EA00144B07 /* GalleryToTilesSegue.h */,
+				3A5320A81C16A7EA00144B07 /* GalleryToTilesSegue.m */,
 			);
 			path = SocialMosaic;
 			sourceTree = "<group>";
@@ -189,7 +194,7 @@
 				TargetAttributes = {
 					ECFEE94F1BFEA7EB004E04AF = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 3QCM2H4ZRK;
+						DevelopmentTeam = 5VY22XSMEX;
 					};
 				};
 			};
@@ -283,6 +288,7 @@
 				ECFEE95B1BFEA7EB004E04AF /* TilesViewController.m in Sources */,
 				ECFEE9581BFEA7EB004E04AF /* AppDelegate.m in Sources */,
 				3A1FF0BC1C003AEF00E9E98F /* TileCell.m in Sources */,
+				3A5320A91C16A7EA00144B07 /* GalleryToTilesSegue.m in Sources */,
 				C4E7180E1C0677C800240801 /* ChooserImageCollectionViewCell.m in Sources */,
 				EC5440961BFEC463001E3005 /* GridView.m in Sources */,
 				C402789B1C0839E7006F4938 /* WelcomeViewController.m in Sources */,
@@ -404,7 +410,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SocialMosaic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.getsocialmosaic.SocialMosaic1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.getsocialmosaic.SocialMosaic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -419,7 +425,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SocialMosaic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.getsocialmosaic.SocialMosaic1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.getsocialmosaic.SocialMosaic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
